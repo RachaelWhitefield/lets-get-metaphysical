@@ -2,12 +2,13 @@
 
 .navbar {
     background: $primary-color;
-    box-shadow: 0 3px 10px $dark-text;
+    // box-shadow: 0 3px 10px $dark-text;
     font-family: $text-font;
 
     a.titleFont {
         font-family: $title-font;
         color: $light-text;
+        font-size: 3rem;
     }
 
     a.titleFont:hover {

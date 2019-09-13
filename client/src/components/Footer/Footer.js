@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="footer">
             <p><i className="fab fa-react react-icon"></i></p>
-            <p>Let's Get Metaphysical</p>
+            <p>STONED</p>
             <p><a id="githib" href="https://github.com/RachaelWhitefield/lets-get-metaphysical" target="blank"><i className="fab fa-github gh-icon"></i></a></p>
         </footer>
     )
