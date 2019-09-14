@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 import API from "../../utils/API";
-import Joke from "../../components/Joke"
 import "./Home.scss";
 
 class Home extends Component {
@@ -12,20 +11,9 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    this.getJoke();
     this.loggedIn();
   }
 
-  getJoke = () => {
-    API.ChuckNorris().then(joke => {
-      let newJoke = joke.data.value.joke.replace(/&quot;/g, '"');
-      this.setState({
-        joke: newJoke
-      })
-    }).catch(err => {
-      console.log(err)
-    });
-  }
 
   loggedIn = () => {
     API.isLoggedIn().then(user => {
@@ -41,12 +29,25 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="homeBox">
-        <Joke joke={this.state.joke}/>
-        {this.state.loggedIn ? (
-          <Button onClick={e=> {this.getJoke()}} color="warning" block>Get New Joke</Button>
-        ) : (<></>)}
+    <div>
+         <section class="landing">
+        <div class="dark-overlay">
+            <div class="landing-inner">
+                <h1 class="x-large">STONED</h1>
+                <p class="lead">Space, the final frontier. These are the voyages of the Starship Enterprise. Its
+                    five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
+                    boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
+                    actually our duty to future generations and their quest to ensure the survival of the human species.
+                </p>
+                <div class="buttons">
+                    <a href="/signup" class="btn btn-primary">Sign Up</a>
+                    <a href="/login" class="btn btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
       </div>
+
     );
   }
 }
