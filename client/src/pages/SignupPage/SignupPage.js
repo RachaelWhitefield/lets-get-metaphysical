@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Signup from "../../components/Signup";
 import API from "../../utils/API";
 import "./SignupPage.scss";
