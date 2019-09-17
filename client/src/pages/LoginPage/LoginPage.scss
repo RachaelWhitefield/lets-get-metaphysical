@@ -1,8 +1,11 @@
+@import "../../sass/variable.scss";
+@import "../../sass/_config.scss";
+@import "../../sass/_form.scss";
+@import "../../sass/_utilities.scss";
 
-
-.login {
+.loginBox {
     position: relative;
-    background: url("../img/rachaelsFavorite.jpeg") no-repeat center center/cover;
+    background: url("/assets/images/rachaelsFavorite.jpeg") no-repeat center center/cover;
     height: 100vh;
 
     &-inner {
@@ -16,3 +19,4 @@
         justify-content: center;
         text-align: center;
     }
+}
