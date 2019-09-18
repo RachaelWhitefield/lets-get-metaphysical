@@ -43,7 +43,7 @@ export default class Navigation extends Component {
             window.location.pathname = "/"
         }).catch((err)=> {
             console.log(err)
-        })
+        }) 
     }
 
     toggle() {
