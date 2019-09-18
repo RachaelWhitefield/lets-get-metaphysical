@@ -23,7 +23,7 @@
 }
 
 body {
-    font-family: "Raleway", sans-serif;
+    font-family: $text-font;
     font-size: 1rem;
     line-height: 1.6;
     background-color: #fff;
@@ -33,6 +33,10 @@ body {
 a {
     text-decoration: none;
     color: $primary-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font;
 }
 
 ul {
