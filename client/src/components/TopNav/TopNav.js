@@ -61,10 +61,10 @@ export default class Navigation extends Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                         <NavItem>
-                                <NavLink href="/discover">Discover</NavLink>
+                                <NavLink href="/runes" className="pages">Runes</NavLink>
                             </NavItem>
                         <NavItem>
-                                <NavLink href="/runes">Runes</NavLink>
+                                <NavLink href="/discover" className="pages">Discover</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/"><i className="fas fa-home light-text"></i></NavLink>
@@ -86,10 +86,10 @@ export default class Navigation extends Component {
                                     ) : (
                                         <>
                                             <DropdownItem>
-                                                <NavLink href="/login">login</NavLink>
+                                                <NavLink href="/login">Login</NavLink>
                                             </DropdownItem>
                                             <DropdownItem>
-                                                <NavLink href="/signup">signup</NavLink>
+                                                <NavLink href="/signup">Signup</NavLink>
                                             </DropdownItem>
                                         </>
                                     )}

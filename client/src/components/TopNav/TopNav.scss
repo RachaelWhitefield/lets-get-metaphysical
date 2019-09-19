@@ -12,14 +12,21 @@
 
     a.titleFont:hover {
         color: $light-text;
+    
+    }
+    
+    a.pages {
+        color: $light-text !important;
+        font-size: 2rem !important;
     }
 
     a.nav-link {
-        font-size: 1.5em;
-        color: $light-text !important;
+        font-size: 1.5rem;
+        font-family: $title-font !important;
     }
 
     .light-text {
-        color: #fff
+        color: #fff;
+        padding-top: 10px;
     }
 }

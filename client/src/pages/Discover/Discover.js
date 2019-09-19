@@ -19,8 +19,8 @@ function Discover() {
            </Col>
            </Row>
         </Container>
-    </>)
-
+    </>
+    )
 };
 
 export default Discover;
