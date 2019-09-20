@@ -20,7 +20,7 @@ function Runes() {
                     </h2>
                     <Row>
                         <Col sm="4" className="cast">
-                            <img src="https://via.placeholder.com/150" />
+                            <img src="https://via.placeholder.com/150x300" />
                         </Col>
                         <Col sm="8">
                         <h3>RUNIC CROSS</h3>
@@ -47,7 +47,7 @@ function Runes() {
                     </Row>
                 </Col>
             </Row>
-            
+
         </Container>
     )
 }
