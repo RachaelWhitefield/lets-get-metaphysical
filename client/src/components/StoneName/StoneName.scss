@@ -1,0 +1,21 @@
+.stoneContainer {
+    position: relative;
+    padding: 30px;
+    
+}
+
+.stoneName {
+    font-size: 7vh;
+    // position: inherit;
+    top: 60px;
+    // left: 60px;
+}
+
+.stoneImage {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 20px;
+    left: 100px;
+    z-index: -1;
+}
