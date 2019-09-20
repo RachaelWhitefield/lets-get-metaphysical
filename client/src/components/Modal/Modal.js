@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-class Modal extends React.Component {
+class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
