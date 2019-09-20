@@ -1,6 +1,7 @@
 import React from "react";
 import Filter from "../../components/Filter";
 import { Container, Col, Row } from "reactstrap";
+import StoneName from "../../components/StoneName";
 
 function Discover() {
     return (
@@ -8,7 +9,7 @@ function Discover() {
         <Container fluid="true">
            <Row>
                <Col sm={{ size: "auto", offset: 1 }}>
-                   <h1 className="stoned">
+                   <h1>
                        Get Totally<br />
                        STONED
                    </h1>
@@ -18,7 +19,20 @@ function Discover() {
             <Filter />
            </Col>
            </Row>
+           <Row>
+           <StoneName />
+           <StoneName />
+           <StoneName />
+           <StoneName />
+           <StoneName />
+           <StoneName />
+           <StoneName />
+           <StoneName />
+           <StoneName />
+           
+           </Row>
         </Container>
+       
     </>
     )
 };
