@@ -10,8 +10,7 @@
     color: $light-text;
     font-size: 25px;
     padding-left: 20px;
-    // padding-bottom: 5px;
-    // padding-top: 5px;
+    
 
     
     
@@ -41,7 +40,7 @@
         color: $light-text;
     }
     .name {
-        float: right;
+        display: in-line inline-block;
     }
 
     // .react-icon {
