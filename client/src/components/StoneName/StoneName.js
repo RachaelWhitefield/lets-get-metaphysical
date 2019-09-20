@@ -11,6 +11,7 @@ function StoneName() {
                         <h1 className="stoneName">Black Tourmaline</h1>
                     <img className="stoneImage" src="https://via.placeholder.com/150x200"></img>
                     </div>
+                    
                 </Col>
         </>
     )

@@ -6,6 +6,7 @@
     padding: 0 2rem;
     margin-top: 6rem;
     margin-bottom: 3rem;
+    color: black;
 }
 
 // Text styles
@@ -57,8 +58,8 @@
 // Buttons
 .btn {
     display: inline-block;
-    background: $light-color;
-    color: #333;
+    background: black !important;
+    color: white;
     padding: 0.4rem 1.3rem;
     border: none;
     cursor: pointer;
