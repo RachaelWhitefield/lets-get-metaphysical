@@ -1,0 +1,19 @@
+[{
+    "name": "Black Tourmaline",
+    "color": "Black",
+    "chakra": "Third Eye",
+    "properties": ["health", "wisdom", "protection"],
+    "image": "https://via.placeholder.com/150x200"
+},{
+    "name": "Rose Quartz",
+    "color": "Pink",
+    "chakra": "Heart",
+    "properties": ["bananas", "laughter", "whatcha know boutdat"],
+    "image": "https://via.placeholder.com/150x200" 
+},{
+    "name": "Carnelian",
+    "color": "Orange",
+    "chakra": "Root",
+    "properties": ["healthy sex life", "money", "boogers"],
+    "image": "https://via.placeholder.com/150x200" 
+}]
