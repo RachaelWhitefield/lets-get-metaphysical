@@ -5,28 +5,38 @@ using UnityEngine.Events;
 
 public class RuneRandomizer : MonoBehaviour
 {
+   
     [SerializeField] Sprite[] runeCharacter;
+    // [SerializeField] int rune;
+    public string currentRune;
    
     SpriteRenderer mySprite;
+    //  StateManager stateManager;
    
     void Start() {
         mySprite = GetComponent<SpriteRenderer>();
     }
 
-     void OnTriggerEnter2D(Collider2D other){
-         RandomizeRune();
+
+    public void OnTriggerEnter2D(Collider2D other){
+        RandomizeRune();  
+        //    Debug.Log(currentRune);
      }
     
 
    public void RandomizeRune() {
       
-           GetComponent<SpriteRenderer>().sprite = runeCharacter[UnityEngine.Random.Range(0, runeCharacter.Length)];
+           var arrayNum = UnityEngine.Random.Range(0, runeCharacter.Length);
+           Sprite runeSprite = runeCharacter[arrayNum];
+           string runeName = runeSprite.name;
+           GetComponent<SpriteRenderer>().sprite = runeSprite;
+           currentRune = runeName;
+
 
    }
 
-   private void OnMouseDown(){
-     
-}
-
+   public string GetCurrentRune() {
+       return currentRune;
+   }
 
 }
