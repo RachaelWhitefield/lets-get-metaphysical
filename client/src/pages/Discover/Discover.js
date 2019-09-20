@@ -8,7 +8,7 @@ function Discover() {
         <Container fluid="true">
            <Row>
                <Col sm={{ size: "auto", offset: 1 }}>
-                   <h1>
+                   <h1 className="stoned">
                        Get Totally<br />
                        STONED
                    </h1>
