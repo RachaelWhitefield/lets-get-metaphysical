@@ -8,23 +8,11 @@
     background: $primary-color;
     font-family: $title-font;
     color: $light-text;
-    font-size: 25px;
+    font-size: 30px;
     padding-left: 20px;
+    display: flex;
+    float: right;
     
-
-    
-    
-    
-    
-    
-    // p {
-    //     line-height: $footer-height;
-    //     width: 33%;
-    //     margin: 0 auto;
-    //     text-align: center;
-    //     display: inline-block;
-    //     font-size: 3rem;
-    // }
 
     .gh-icon {
         color: $light-text;
@@ -32,16 +20,23 @@
         padding: .5rem;
     }
 
-    
-
     .fab {
-        font-size: 1rem;
-        padding: 5px;
+        font-size: 1.5rem;
+        padding: 1rem;
         color: $light-text;
     }
+
     .name {
-        display: in-line inline-block;
+        padding: 20px;
+        padding-top: 10px;
+        margin-top: 10px;
+        width: 25%;
+        text-align: center;
+        
+        
+
     }
+ 
 
     // .react-icon {
     //     font-size: 3rem;
