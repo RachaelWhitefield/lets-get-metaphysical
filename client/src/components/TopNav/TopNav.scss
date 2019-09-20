@@ -2,7 +2,6 @@
 
 .navbar {
     background: $primary-color;
-    // box-shadow: 0 3px 10px $dark-text;
     font-family: $text-font;
 
     a.titleFont {
@@ -13,14 +12,21 @@
 
     a.titleFont:hover {
         color: $light-text;
-        font-weight: bold;
+    
+    }
+    
+    a.pages {
+        color: $light-text !important;
+        font-size: 2rem !important;
     }
 
     a.nav-link {
-        font-size: 1.2em;
+        font-size: 1.5rem;
+        font-family: $title-font !important;
     }
 
     .light-text {
-        color: $light-text
+        color: #fff;
+        padding-top: 10px;
     }
 }
