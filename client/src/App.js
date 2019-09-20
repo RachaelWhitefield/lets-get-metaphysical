@@ -9,6 +9,7 @@ import TopNav from "./components/TopNav";
 import Footer from "./components/Footer";
 import SignupPage from "./pages/SignupPage";
 import {Container, Col, Row} from "reactstrap";
+import Discover from "./pages/Discover";
   
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route exact path="/login" render={(props) => <LoginPage {...props} action="login" />} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/runes" component={Runes} />
+              <Route exact path="/discover" component={Discover} />
               <Route component={NoMatch} />
             </Switch>
           </div>

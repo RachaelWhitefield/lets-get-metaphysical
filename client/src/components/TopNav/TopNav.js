@@ -43,7 +43,7 @@ export default class Navigation extends Component {
             window.location.pathname = "/"
         }).catch((err)=> {
             console.log(err)
-        })
+        }) 
     }
 
     toggle() {
@@ -60,6 +60,12 @@ export default class Navigation extends Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
+                        <NavItem>
+                                <NavLink href="/runes" className="pages">Runes</NavLink>
+                            </NavItem>
+                        <NavItem>
+                                <NavLink href="/discover" className="pages">Discover</NavLink>
+                            </NavItem>
                             <NavItem>
                                 <NavLink href="/"><i className="fas fa-home light-text"></i></NavLink>
                             </NavItem>
@@ -80,10 +86,10 @@ export default class Navigation extends Component {
                                     ) : (
                                         <>
                                             <DropdownItem>
-                                                <NavLink href="/login">login</NavLink>
+                                                <NavLink href="/login">Login</NavLink>
                                             </DropdownItem>
                                             <DropdownItem>
-                                                <NavLink href="/signup">signup</NavLink>
+                                                <NavLink href="/signup">Signup</NavLink>
                                             </DropdownItem>
                                         </>
                                     )}
