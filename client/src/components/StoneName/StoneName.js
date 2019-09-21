@@ -7,7 +7,7 @@ import "./StoneName.scss";
 function StoneName(props) {
     return (
         <> 
-                <Col sm="2">
+                <Col sm="2" onClick={props.stoneModalOpen}>
                     <h1>{props.name}</h1>
                     <img src={props.image} />
                 </Col>
