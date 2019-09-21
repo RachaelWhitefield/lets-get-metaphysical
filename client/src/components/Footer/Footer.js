@@ -3,10 +3,16 @@ import "./Footer.scss";
 
 function Footer() {
     return (
-        <footer className="footer">
-            <p><i className="fab fa-react react-icon"></i></p>
-            <p>STONED</p>
-            <p><a id="githib" href="https://github.com/RachaelWhitefield/lets-get-metaphysical" target="blank"><i className="fab fa-github gh-icon"></i></a></p>
+        <footer className="footer" >
+    
+            <div className="name">Casey Eickhoff<br /><a id="githib" href="https://github.com/RachaelWhitefield/lets-get-metaphysical" target="blank"><i className="fab fa-github gh-icon"></i></a><a id="linkedin" href="https://www.linkedin.com/in/rachael-whitefield-952198180/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+
+            <div className="name">Rachael Whitefield<br /><a id="githib" href="https://github.com/RachaelWhitefield/lets-get-metaphysical" target="blank"><i className="fab fa-github gh-icon"></i></a><a id="linkedin" href="https://www.linkedin.com/in/rachael-whitefield-952198180/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+            
+            <div className="name">Wynn Cheney<br /><a id="githib" href="https://github.com/RachaelWhitefield" target="blank"><i className="fab fa-github gh-icon"></i></a><a id="linkedin" href="https://www.linkedin.com/in/rachael-whitefield-952198180/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+
+            <div className="name">Liv Heller<br /><a id="githib" href="https://github.com/TheGuardingDark" target="blank"><i className="fab fa-github gh-icon"></i></a><a id="linkedin" href="https://www.linkedin.com/in/liv-heller/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+            
         </footer>
     )
 }
