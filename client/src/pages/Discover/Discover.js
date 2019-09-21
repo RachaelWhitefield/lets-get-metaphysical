@@ -9,7 +9,8 @@ class Discover extends React.Component {
 
     state = {
         stones: [...stones],
-        modalOpen: false
+        modalOpen: false,
+        currentStone: null
     }
 
     stoneFilter = (section, query) => {
@@ -29,10 +30,10 @@ class Discover extends React.Component {
         console.log("modal open is clicked")
       }
 
-    stoneModalOpen = (event) => {
+    stoneModalOpen = (event, stone) => {
         event.preventDefault();
-        this.setState({modalOpen: true});
-        console.log("fucking open")
+        this.setState({modalOpen: true, currentStone: stone});
+    
     }
 
     render() {
@@ -59,7 +60,7 @@ class Discover extends React.Component {
                                 name={stone.name}
                                 image={stone.image}
                                 key={stone.id}
-                                onClick={this.stoneModalOpen}
+                                stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
                                 toggle={this.toggle}
                             />
                         ))}
@@ -67,6 +68,7 @@ class Discover extends React.Component {
                         modalOpen={this.state.modalOpen}
                         toggle={this.toggle}
                         isOpen={this.state.modalOpen}
+                        stone={this.state.currentStone}
                         />
                     </Row>
                 </Container>
