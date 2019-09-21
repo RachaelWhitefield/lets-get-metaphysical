@@ -11,6 +11,7 @@ public class RuneRandomizer : MonoBehaviour
     public string currentRune;
    
     SpriteRenderer mySprite;
+    StateManager stateManager;
     //  StateManager stateManager;
    
     void Start() {
@@ -19,7 +20,9 @@ public class RuneRandomizer : MonoBehaviour
 
 
     public void OnTriggerEnter2D(Collider2D other){
-        RandomizeRune();  
+        RandomizeRune();
+         stateManager = FindObjectOfType<StateManager>();
+            stateManager.ManageState();  
         //    Debug.Log(currentRune);
      }
     
@@ -32,11 +35,7 @@ public class RuneRandomizer : MonoBehaviour
            GetComponent<SpriteRenderer>().sprite = runeSprite;
            currentRune = runeName;
 
-
    }
 
-   public string GetCurrentRune() {
-       return currentRune;
-   }
 
 }

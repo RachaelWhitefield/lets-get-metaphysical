@@ -8,7 +8,9 @@ public class StateManager : MonoBehaviour
 
     [SerializeField] Text textComponent;
     [SerializeField] State startingState;
-    public string rune;
+
+    
+   
 
     State state;
     RuneRandomizer runeRandomizer;
@@ -19,7 +21,7 @@ public class StateManager : MonoBehaviour
     {
         state = startingState;
         textComponent.text = state.GetStateInfo();
-    
+        runeRandomizer = GameObject.FindObjectOfType<RuneRandomizer>();
     }
 
 
@@ -28,26 +30,28 @@ public class StateManager : MonoBehaviour
         // ManageState();
     }
 
-    private void ManageState() {
-        // var nextStates = state.GetNextState();
+    public void ManageState() {
+        var nextStates = state.GetNextState();
 
-        // string v = runeRandomizer.GetCurrentRune();
-        // rune = v; 
-        // if(rune != null) {
-       
-        // Debug.Log(rune);
+        string thisRune = runeRandomizer.currentRune;
 
-        // }
+        Debug.Log(thisRune);
+
+        
 
 
 
-    //     if(Input.GetKeyDown(KeyCode.Alpha1)) {
-    //         state = nextStates[0];
-    //     } else if(Input.GetKeyDown(KeyCode.Alpha2)) {
-    //         state = nextStates[1];
-    //     } else if(Input.GetKeyDown(KeyCode.Alpha3)) {
-    //         state = nextStates[2];
-    //     }
-    //     textComponent.text = state.GetStateInfo();
+        if(thisRune == "a") {
+            state = nextStates[0];
+        } else if(thisRune == "b") {
+            state = nextStates[1];
+        } else if(thisRune == "d") {
+            state = nextStates[2];
+        } else if(thisRune == "f") {
+            state = nextStates[3];
+        } else if(thisRune == "g") {
+            state = nextStates[4];
+        }
+        textComponent.text = state.GetStateInfo();
     }
 }
