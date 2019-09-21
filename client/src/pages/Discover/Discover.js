@@ -62,7 +62,7 @@ class Discover extends React.Component {
                                 onClick={this.stoneModalOpen}
                                 toggle={this.toggle}
                             />
-                        ))};
+                        ))}
                         <StoneModal 
                         modalOpen={this.state.modalOpen}
                         toggle={this.toggle}

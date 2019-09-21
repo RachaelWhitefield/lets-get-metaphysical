@@ -33,10 +33,10 @@ class Filter extends React.Component {
           <DropdownItem header>Filter By Chakra</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="root" data-section="chakra">Root</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="sacral" data-section="chakra">Sacral</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="solarPlexus" data-section="chakra">Solar Plexus</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="solar plexus" data-section="chakra">Solar Plexus</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="heart" data-section="chakra">Heart</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="throat" data-section="chakra">Throat</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="thirdEye" data-section="chakra">Third Eye</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="third eye" data-section="chakra">Third Eye</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="crown" data-section="chakra">Crown</DropdownItem>
           <DropdownItem header>Filter By Color</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="gray" data-section="color">Gray</DropdownItem>
