@@ -26,10 +26,9 @@ function Discover() {
            <StoneName />
            <StoneName />
            <StoneName />
-           <StoneName />
-           <StoneName />
-           <StoneName />
            
+           
+
            </Row>
         </Container>
        

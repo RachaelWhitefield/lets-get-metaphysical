@@ -6,31 +6,48 @@
     position: absolute;
     height: $footer-height;
     background: $primary-color;
-    font-family: $text-font;
+    font-family: $title-font;
     color: $light-text;
-    p {
-        line-height: $footer-height;
-        width: 33%;
-        margin: 0 auto;
-        text-align: center;
-        display: inline-block;
-        font-size: 3rem;
-    }
+    font-size: 30px;
+    padding-left: 20px;
+    display: flex;
+    float: right;
+    
 
     .gh-icon {
         color: $light-text;
-        font-size: 3rem;
+        font-size: 1rem;
+        padding: .5rem;
     }
 
-    .react-icon {
-        font-size: 3rem;
-        -webkit-animation:spin 25s linear infinite;
-        -moz-animation:spin 25s linear infinite;
-        animation:spin 25s linear infinite;
+    .fab {
+        font-size: 1.5rem;
+        padding: 1rem;
+        color: $light-text;
     }
+
+    .name {
+        padding: 20px;
+        padding-top: 10px;
+        margin-top: 10px;
+        width: 25%;
+        text-align: center;
+        
+        
+
+    }
+ 
+
+    // .react-icon {
+    //     font-size: 3rem;
+    //     -webkit-animation:spin 25s linear infinite;
+    //     -moz-animation:spin 25s linear infinite;
+    //     animation:spin 25s linear infinite;
+    // }
 
 
 }
+
 
 // #reactLogo {
 //     -webkit-animation:spin 10s linear infinite;
@@ -38,6 +55,6 @@
 //     animation:spin 10s linear infinite;
 // }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+// @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+// @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+// @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
