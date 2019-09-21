@@ -50,7 +50,7 @@ class LoginPage extends Component {
         <div class="dark-overlay">
           <div class="signup-inner">
             <section class="container">
-              <h1 class="x-large text-primary">Log In</h1>
+              
               
                 <Login
                   username={this.state.username}

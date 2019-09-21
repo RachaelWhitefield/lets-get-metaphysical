@@ -24,11 +24,21 @@
 }
 
 .signupLink {
-    margin-top: 10px;
-    color: black !important;
+    margin-top: 20px;
 }
 
-.loginTitle {
+
+
+.text-primary {
     color: black !important;
+    
+}
+
+.signupLink {
+    a {
+        color: black;
+        font-family: $text-font;
+        font-size: 1rem;
+    }
 }
 
