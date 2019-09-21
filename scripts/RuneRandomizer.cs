@@ -28,6 +28,11 @@ public class RuneRandomizer : MonoBehaviour
         RandomizeRune();
         //    Debug.Log(currentRune);
      }
+
+     public void OnTriggerExit2D(Collider2D other) {
+          GetComponent<SpriteRenderer>().sprite = null;
+          currentRune = null;
+     }
     
 
    public void RandomizeRune() {
