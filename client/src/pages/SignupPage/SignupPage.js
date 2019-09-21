@@ -49,12 +49,12 @@ class SignupPage extends Component {
 
   render() {
     return (
-      <section class="signup">
-        <div class="dark-overlay">
-          <div class="signup-inner">
-            <section class="container">
-              <h1 class="x-large text-primary">Sign Up</h1>
-              <p class="lead">Create Your Profile</p>
+      <section className="signup">
+        <div className="dark-overlay">
+          <div className="signup-inner">
+            <section className="container">
+              <h1 className="x-large text-primary">Sign Up</h1>
+              <p className="lead">Create Your Profile</p>
               
                 <Signup
                   username={this.state.username}
