@@ -1,19 +1,25 @@
 [{
-    "name": "Black Tourmaline",
-    "color": "Black",
-    "chakra": "Third Eye",
+    "name": "black tourmaline",
+    "color": "black",
+    "chakra": "third eye",
     "properties": ["health", "wisdom", "protection"],
-    "image": "https://via.placeholder.com/150x200"
+    "image": "https://via.placeholder.com/150x200",
+    "isFavorite":"false",
+    "id": "01"
 },{
-    "name": "Rose Quartz",
-    "color": "Pink",
-    "chakra": "Heart",
+    "name": "rose quartz",
+    "color": "pink",
+    "chakra": "heart",
     "properties": ["bananas", "laughter", "whatcha know boutdat"],
-    "image": "https://via.placeholder.com/150x200" 
+    "image": "https://via.placeholder.com/150x200",
+    "isFavorite":"false",
+    "id": "02" 
 },{
-    "name": "Carnelian",
-    "color": "Orange",
-    "chakra": "Root",
+    "name": "carnelian",
+    "color": "orange",
+    "chakra": "root",
     "properties": ["healthy sex life", "money", "boogers"],
-    "image": "https://via.placeholder.com/150x200" 
+    "image": "https://via.placeholder.com/150x200",
+    "isFavorite":"false",
+    "id": "03"
 }]

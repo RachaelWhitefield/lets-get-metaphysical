@@ -1,22 +1,17 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import StoneName from "../StoneName";
 
-class Modal extends React.Component {
+class StoneModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false,
+      modalOpen: false,
       isFavorite: false
       //false is add to faves and true is remove from favorites
     };
 
-    this.toggle = this.toggle.bind(this);
-  }
 
-  toggle() {
-    this.setState(prevState => ({
-      modal: !prevState.modal
-    }));
   }
 
 
@@ -24,8 +19,8 @@ class Modal extends React.Component {
   render() {
     return (
       <div>
-        <StoneName onClick={this.toggle} />
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <StoneName onClick={this.props.toggle} />
+        <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>
             <h4>Chakras</h4>
@@ -44,7 +39,7 @@ class Modal extends React.Component {
             </ul>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Add to favorites</Button>{' '}
+            <Button color="primary">Add to favorites</Button>{' '}
             {/* <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
           </ModalFooter>
         </Modal>
@@ -53,4 +48,4 @@ class Modal extends React.Component {
   }
 }
 
-export default Modal;
+export default StoneModal;
