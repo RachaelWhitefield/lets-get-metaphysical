@@ -18,19 +18,15 @@ public class SceneLoader : MonoBehaviour
       SceneManager.LoadScene(currentSceneIndex + 1);
   }
 
-  public void LoadCrossScene() {
-    SceneManager.LoadScene(crossScene);
-  }
+  public void LoadCrossScene() => SceneManager.LoadScene(crossScene);
+  
 
-  public void LoadNornScene() {
-    SceneManager.LoadScene(nornScene);
-  }
+  public void LoadNornScene() => SceneManager.LoadScene(nornScene);
+  
 
-  public void LoadSingleScene() {
-    SceneManager.LoadScene(singleScene);
-  }
+  public void LoadSingleScene() => SceneManager.LoadScene(singleScene);
+  
 
-  public void LoadStartScene() {
-      SceneManager.LoadScene(0);
-  }
+  public void LoadStartScene() => SceneManager.LoadScene(0);
+
 }
