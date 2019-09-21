@@ -3,12 +3,13 @@ import { Col } from "reactstrap";
 import "./StoneName.scss";
 
 
-function StoneName() {
+
+function StoneName(props) {
     return (
         <> 
-                <Col sm={{ size: "auto", offset: 1 }}>
-                    <h1>Hello, World!<br />
-                    </h1>
+                <Col sm="2">
+                    <h1>{props.name}</h1>
+                    <img src={props.image} />
                 </Col>
         </>
     )
