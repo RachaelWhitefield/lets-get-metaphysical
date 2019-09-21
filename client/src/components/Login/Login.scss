@@ -6,12 +6,15 @@
 #loginBtn {
     margin-top: 50px;
     font-family: $text-font;
-    
 }
 
-.innerLoginBox {
-    padding: 40px;
-    background-color: rgba(255,255,255, 0.6);
+.loginBox {
+    padding: 90px 200px;
     font-family: $text-font;
 }
+
+.signup-inner {
+    background-color: rgba(255,255,255, 0.6);
+}
+
 

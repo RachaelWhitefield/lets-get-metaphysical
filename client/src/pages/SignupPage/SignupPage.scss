@@ -3,7 +3,7 @@
 @import "../../sass/_form.scss";
 @import "../../sass/_utilities.scss";
 
-.signup {
+.signupBox {
     position: relative;
     background: url("/assets/images/signupPage.jpeg") no-repeat center center/cover;
     height: 100vh;
@@ -21,14 +21,23 @@
     }
 }
 
+.loginLink {
+    margin-top: 20px;
+}
 .text-primary {
     color: black !important;
 }
 
-.signupLink {
+.loginLink {
     a {
         color: black;
         font-family: $text-font;
         font-size: 1rem;
+        text-align: center;
     }
+}
+
+.lead {
+    text-align: center !important;
+    font-family: $text-font;
 }

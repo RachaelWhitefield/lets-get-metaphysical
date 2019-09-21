@@ -49,12 +49,9 @@ class SignupPage extends Component {
 
   render() {
     return (
-      <section class="signup">
-        <div class="dark-overlay">
+      <section class="signupBox">
           <div class="signup-inner">
             <section class="container">
-              <h1 class="x-large text-primary">Sign Up</h1>
-              <p class="lead">Create Your Profile</p>
               
                 <Signup
                   username={this.state.username}
@@ -64,10 +61,8 @@ class SignupPage extends Component {
                   handleInputChange={this.handleInputChange}
                   message={this.state.message}
                 />
-             
             </section>
           </div>
-        </div>
       </section>
     );
   }

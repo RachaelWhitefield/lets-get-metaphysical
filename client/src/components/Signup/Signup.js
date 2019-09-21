@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText, Alert } from 'reactstrap';
 import { Link } from "react-router-dom";
+import "./Signup.scss";
 
 class Signup extends Component {
     state = {
@@ -58,9 +59,9 @@ class Signup extends Component {
 
     render() {
         return (
-            <div className="loginBox">
+            <>
                 
-                
+                <h1 className="x-large" align="center">Sign Up</h1>
                 {this.props.message?(
                     <Alert className="animated fadeIn" color="danger">{this.props.message}</Alert>
                 ): (<></>)}
@@ -80,15 +81,15 @@ class Signup extends Component {
                     </FormGroup>
                     {/* if all fields are valid, allow the user to submit the form */}
                     {(this.state.validUsername && this.state.validPassword && this.state.confirmPassword) ? (
-                        <Button onClick={this.props.handleSignup} color="success" block>Signup</Button>
+                        <Button onClick={this.props.handleSignup}  block>Signup</Button>
                     ) : (
-                        <Button onClick={this.props.handleSignup} color="danger" block disabled>Signup</Button>
+                        <Button id="signupBtn" onClick={this.props.handleSignup} block>Signup</Button>
                     )}
-                    <p className="signupLink">
-                        <Link to="/login">Already have an account?  Sign in here!</Link>
+                    <p className="loginLink">
+                        <Link to="/login">Already have an account?  Log in here!</Link>
                     </p>
                 </Form>
-            </div>
+            </>
         );
     }
 }

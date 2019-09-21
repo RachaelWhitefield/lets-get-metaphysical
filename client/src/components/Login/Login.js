@@ -6,8 +6,8 @@ import "./Login.scss";
 function Login(props) {
     return (
         <div className="innerLoginBox">
-            {/* <h2 className="loginTitle title-font">Login</h2> */}
-            <h1 class="x-large">Log In</h1>
+
+            <h1 className="x-large" align="center">Log In</h1>
             {props.message ? (
                 <Alert className="animated fadeIn" color="danger">{props.message}</Alert>
             ) : (<></>)}

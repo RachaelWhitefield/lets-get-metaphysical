@@ -3,15 +3,19 @@
 @import "../../sass/_form.scss";
 @import "../../sass/_utilities.scss";
 
-#loginBtn {
-    margin-top: 50px;
+#signupBtn {
+    margin: 1.2rem 3rem;
     font-family: $text-font;
-    
 }
 
-.innerLoginBox {
-    padding: 40px;
-    background-color: rgba(255,255,255, 0.6);
+.signupBox {
+    padding: 30px 200px;
     font-family: $text-font;
-    margin-bottom: 30px;
+
+}
+
+.signup-inner {
+    background-color: rgba(255,255,255, 0.6);
+    // padding-top: 1px;
+    
 }
