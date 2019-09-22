@@ -27,10 +27,10 @@ class Filter extends React.Component {
 
   render() {
     return (
-      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-        <DropdownToggle caret>Filter Stones</DropdownToggle>
+      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} direction="down">
+        <DropdownToggle caret color={"#1b2a49"}>Filter Stones</DropdownToggle>
         <DropdownMenu>
-          <DropdownItem header>Filter By Chakra</DropdownItem>
+          <DropdownItem header>CHAKRA</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="root" data-section="chakra">Root</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="sacral" data-section="chakra">Sacral</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="solar plexus" data-section="chakra">Solar Plexus</DropdownItem>
@@ -38,7 +38,8 @@ class Filter extends React.Component {
           <DropdownItem onClick={this.filterClick} value="throat" data-section="chakra">Throat</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="third eye" data-section="chakra">Third Eye</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="crown" data-section="chakra">Crown</DropdownItem>
-          <DropdownItem header>Filter By Color</DropdownItem>
+          <DropdownItem divider />
+          <DropdownItem header>COLOR</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="gray" data-section="color">Gray</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="black" data-section="color">Black</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="red" data-section="color">Red</DropdownItem>

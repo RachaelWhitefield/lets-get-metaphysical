@@ -1,0 +1,18 @@
+@import "../../sass/_config.scss";
+@import "../../sass/_utilities.scss";
+@import "../../sass/variable.scss";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font;
+    font-weight: $title-weight;
+}
+
+h6 {
+    font-size: 20px !important;
+}
+
+button.btn {
+    background-color: transparent !important;
+    border-bottom-color: #1b2a49;
+    border-bottom: solid 3px;
+}
