@@ -3,7 +3,7 @@
     "color": "black",
     "chakra": "third eye",
     "properties": ["health", "wisdom", "protection"],
-    "image": "https://via.placeholder.com/150x200",
+    "image": "../../assets/images/stones/aquamarine.png",
     "isFavorite":"false",
     "id": "01"
 },{
@@ -11,7 +11,7 @@
     "color": "pink",
     "chakra": "heart",
     "properties": ["bananas", "laughter", "whatcha know boutdat"],
-    "image": "https://via.placeholder.com/150x200",
+    "image": "../../assets/images/stones/aquamarine.png",
     "isFavorite":"false",
     "id": "02" 
 },{
@@ -19,7 +19,55 @@
     "color": "orange",
     "chakra": "root",
     "properties": ["healthy sex life", "money", "boogers"],
-    "image": "https://via.placeholder.com/150x200",
+    "image": "../../assets/images/stones/aquamarine.png",
+    "isFavorite":"false",
+    "id": "03"
+}, {
+    "name": "black tourmaline",
+    "color": "black",
+    "chakra": "third eye",
+    "properties": ["health", "wisdom", "protection"],
+    "image": "../../assets/images/stones/aquamarine.png",
+    "isFavorite":"false",
+    "id": "01"
+},{
+    "name": "rose quartz",
+    "color": "pink",
+    "chakra": "heart",
+    "properties": ["bananas", "laughter", "whatcha know boutdat"],
+    "image": "../../assets/images/stones/aquamarine.png",
+    "isFavorite":"false",
+    "id": "02" 
+},{
+    "name": "carnelian",
+    "color": "orange",
+    "chakra": "root",
+    "properties": ["healthy sex life", "money", "boogers"],
+    "image": "../../assets/images/stones/aquamarine.png",
+    "isFavorite":"false",
+    "id": "03"
+}, {
+    "name": "black tourmaline",
+    "color": "black",
+    "chakra": "third eye",
+    "properties": ["health", "wisdom", "protection"],
+    "image": "../../assets/images/stones/aquamarine.png",
+    "isFavorite":"false",
+    "id": "01"
+},{
+    "name": "rose quartz",
+    "color": "pink",
+    "chakra": "heart",
+    "properties": ["bananas", "laughter", "whatcha know boutdat"],
+    "image": "../../assets/images/stones/aquamarine.png",
+    "isFavorite":"false",
+    "id": "02" 
+},{
+    "name": "carnelian",
+    "color": "orange",
+    "chakra": "root",
+    "properties": ["healthy sex life", "money", "boogers"],
+    "image": "../../assets/images/stones/aquamarine.png",
     "isFavorite":"false",
     "id": "03"
 }]

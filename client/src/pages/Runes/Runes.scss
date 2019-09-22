@@ -1,0 +1,37 @@
+@import "../../sass/_config.scss";
+@import "../../sass/_utilities.scss";
+@import "../../sass/variable.scss";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font;
+    font-weight: $title-weight;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 2.3rem !important;
+}
+
+.runed {
+    font-size: 12vh;
+    line-height: 10rem;
+}
+
+.game {
+    padding: 50px 0;
+}
+
+.iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+  }
+   
+  .iframe-container iframe {
+     border: 0;
+     height: 100%;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+  }

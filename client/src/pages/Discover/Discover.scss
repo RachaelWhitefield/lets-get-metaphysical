@@ -1,3 +1,17 @@
+@import "../../sass/_config.scss";
+@import "../../sass/_utilities.scss";
 @import "../../sass/variable.scss";
 
 
+h1.pageTitle {
+    font-size: 40px;
+    line-height: 2.3rem !important;
+    padding: 100px 0 30px 30px;
+    color: #8042a5;
+}
+
+.stoned {
+    font-size: 12vh;
+    line-height: 8rem;
+    color: #016a88;
+}
