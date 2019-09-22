@@ -6,12 +6,36 @@
 h1.pageTitle {
     font-size: 40px;
     line-height: 2.3rem !important;
-    padding: 100px 0 30px 30px;
-    color: #8042a5;
+    padding: 100px 0 30px 0px;
+    color: black;
 }
 
-.stoned {
+.header {
     font-size: 12vh;
     line-height: 8rem;
-    color: #016a88;
+    background: linear-gradient(233deg, #8042a5, #3b156c, #016a88, #01b3bf, #81db38);
+    background-size: 600% 600%;
+    background-clip: text;
+    color: transparent;
+    
+    -webkit-background-clip: text;
+    -webkit-animation: AnimationName 26s ease infinite;
+    -moz-animation: AnimationName 26s ease infinite;
+    animation: AnimationName 26s ease infinite;
+    
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 88%}
+        50%{background-position:100% 13%}
+        100%{background-position:0% 88%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 88%}
+        50%{background-position:100% 13%}
+        100%{background-position:0% 88%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 88%}
+        50%{background-position:100% 13%}
+        100%{background-position:0% 88%}
+    }
 }

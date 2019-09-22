@@ -42,16 +42,16 @@ class Discover extends React.Component {
             <>
                 <Container fluid>
                     <Row>
-                        <Col sm="3">
+                        <Col sm={{ size: 3, offset: 1 }}>
                             <h1 className="pageTitle">
-                                GET TOTAlly<br />
-                                <span className="stoned">STONED</span>
+                                GET TOTALLY<br />
+                                <span className="header">STONED</span>
                             </h1>
                             <Filter
                                 sortingFunction={this.stoneFilter}
                             />
                         </Col>
-                        <Col sm="9">
+                        <Col sm="8">
                             <Container>
                             <Row>
                             {this.state.stones.map(stone => (
