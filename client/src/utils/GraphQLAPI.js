@@ -25,7 +25,5 @@ export async function getGemstones() {
 
   const responseBody = await response.json();
   return responseBody.data.getAllChakras;
-  // export default allStones;
 }
 
-// export default allStones;

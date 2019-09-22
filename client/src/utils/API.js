@@ -29,6 +29,22 @@ export default {
   // api that gets a random Chuck Norris Joke
   ChuckNorris: function() {
     return axios.get("https://api.icndb.com/jokes/random");
-  }
+  },
 
+ getFavs: function() {
+  return axios.get("/api/favorites");
+ },
+
+//  getFav: function(id) {
+//    return axios.get("/api/favorites/new");
+//  },
+
+ deleteFav: function(id) {
+   return axios.delete("/api/favorites/" + id);
+ },
+
+ saveFav: function(favData) {
+   console.log('this is the data passing to the backend', favData)
+   return axios.post("/api/favorites/", favData);
+ }
 };

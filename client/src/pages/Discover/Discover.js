@@ -19,20 +19,23 @@ class Discover extends React.Component {
 
   async componentDidMount() {
     const allStones = await getGemstones();
-    // 
-    // console.log('this is the response body', stones);
-    // const stones = responseBody.data.getAllChakras;
+
     const stones = []
     allStones.forEach(stone => {
-      //   console.log('first one yo')
-        // console.log(stone.gemstones);
+
         if(stone.gemstones.length > 0){
           stone.gemstones.forEach(gemstone => {
-            stones.push({id: stone.id, chakra: stone.name, name: gemstone.name, properties: gemstone.metaProps, color: gemstone.color, image: gemstone.image})
-              // allStones.push({id: gemstone.id + allStones.length}, )
+            stones.push({
+                id: stone.id, 
+                chakra: stone.name, 
+                name: gemstone.name, 
+                properties: gemstone.metaProps, 
+                color: gemstone.color, 
+                image: gemstone.image
+              })
             })
         }
-      // allStones.push(stone)
+
         
     });
     console.log('This is all stones', allStones);
@@ -44,7 +47,7 @@ class Discover extends React.Component {
     let stonesCopy = [...this.state.stones];
     console.log(stonesCopy)
     console.log(section, query);
-    let filterStones = stonesCopy.filter(stone => stone[section] == query);
+    let filterStones = stonesCopy.filter(stone => stone[section] === query);
     console.log(filterStones);
 
     this.setState({ stones: filterStones });

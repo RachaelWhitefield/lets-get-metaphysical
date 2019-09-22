@@ -46,11 +46,11 @@ class LoginPage extends Component {
     };
     render() {
     return (
-        <section class="loginBox">
-        <div class="dark-overlay">
-          <div class="signup-inner">
-            <section class="container">
-              <h1 class="x-large text-primary">Log In</h1>
+        <section className="loginBox">
+        <div className="dark-overlay">
+          <div className="signup-inner">
+            <section className="container">
+              <h1 className="x-large text-primary">Log In</h1>
               
                 <Login
                   username={this.state.username}

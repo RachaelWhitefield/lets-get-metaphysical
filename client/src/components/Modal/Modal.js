@@ -1,19 +1,35 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import StoneName from "../StoneName";
+import API from "../../utils/API";
 
 class StoneModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       modalOpen: false,
-      isFavorite: false
-      //false is add to faves and true is remove from favorites
-    };
+      favText: "Add to Favorites"
 
+    };
 
   }
 
+  handleClick = () => {
+
+    let newText = this.state.favText === "Add to Favorites" ? "Saved to Favorites" : "Add to Favorites"
+    this.setState({favText: newText})
+   
+      API.saveFav({
+        favorite_name: this.props.stone.name,
+        favorite_color: this.props.stone.color,
+        favorite_chakra: this.props.stone.chakra,
+        favorite_metaProps: this.props.stone.properties,
+        favorite_image: this.props.stone.image,
+        }).then(res => console.log('success', res.data))
+        .catch(err => console.log(err));
+      
+    
+};  
 
 
   render() {
@@ -23,7 +39,7 @@ class StoneModal extends React.Component {
         <>
         <StoneName onClick={this.props.toggle} />
         <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalHeader toggle={this.toggle}>{this.props.stone.name}</ModalHeader>
           <ModalBody>
             <h1>{this.props.stone.name}</h1>
             <h4>Chakras</h4>
@@ -43,7 +59,7 @@ class StoneModal extends React.Component {
             </ul>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary">Add to favorites</Button>{' '}
+            <Button color="primary" onClick={this.handleClick}>{this.state.favText}</Button>{' '}
             {/* <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
           </ModalFooter>
         </Modal>
@@ -53,5 +69,6 @@ class StoneModal extends React.Component {
     );
   }
 }
+
 
 export default StoneModal;
