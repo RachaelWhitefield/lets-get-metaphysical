@@ -44,7 +44,7 @@ class Discover extends React.Component {
                     <Row>
                         <Col sm="3">
                             <h1 className="pageTitle">
-                                Get Totally<br />
+                                GET TOTAlly<br />
                                 <span className="stoned">STONED</span>
                             </h1>
                             <Filter

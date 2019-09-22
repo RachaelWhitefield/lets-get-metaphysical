@@ -5,56 +5,58 @@ import "./Runes.scss";
 function Runes() {
 
     return (
-        <Container>
+        <Container fluid>
             <Row>
-                <Col sm={{ size: "3", offset: "2" }}>
-                    <h1>
-                        Get Totally<br />
-                        <span className="runed">RUNED</span>
+                <Col sm={{ size: 3, offset: 1 }}>
+                    <h1 className="pageTitle">
+                        GET RADICALLY<br />
+                        <span className="header">RUNED</span>
                     </h1>
                 </Col>
-            </Row>
-            <Row>
-                <Col sm={{ size: "6", offset: "6" }}>
-                    <Row>
-                        <Col sm="4" className="cast">
-                            <img src="../../../assets/images/cross.png" />
-                        </Col>
-                        <Col sm="8">
-                            <h3>RUNIC CROSS</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col sm="4" className="cast">
-                            <img src="../../../assets/images/norn.png" />
-                        </Col>
-                        <Col sm="8">
-                            <h3>RUNIC CROSS</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col sm="4" className="cast">
-                            <img src="../../../assets/images/single.png" />
-                        </Col>
-                        <Col sm="8">
-                            <h3>RUNIC CROSS</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
-                        </Col>
-                    </Row>
+                <Col sm="6">
+                    <Container>
+                        <Row>
+                            <Col sm="3" className="cast">
+                                <img src="../../../assets/images/cross.jpg" />
+                            </Col>
+                            <Col sm="8">
+                                <h3 className="castTitle">RUNIC CROSS CAST</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="3" className="cast">
+                                <img src="../../../assets/images/norn.jpg" />
+                            </Col>
+                            <Col sm="8">
+                                <h3 className="castTitle">NORN CAST</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="3">
+                                <img src="../../../assets/images/single.jpg" />
+                            </Col>
+                            <Col sm="8">
+                                <h3 className="castTitle">SINGLE CAST</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Col>
-            </Row>
-            <Row>
-                <Col lg="12" className="game">
-                    <div className="iframe-container">
-                    <iframe src="https://i.simmer.io/@SummoningDark/~788a3462-18f6-4f9a-0d4e-e5bd24984062" 
-                            allow="autoplay; encrypted-media"
-                            allowFullScreen
-                            title="unityGame"
-                            className="embed-responsive embed-responsive-16by9"></iframe>
-                    </div>
-                </Col>
+                <Container className="gameContainer">
+                    <Row>
+                        <Col lg="12" className="game">
+                            <div className="iframe-container">
+                                <iframe src="https://i.simmer.io/@SummoningDark/~788a3462-18f6-4f9a-0d4e-e5bd24984062"
+                                    allow="autoplay; encrypted-media"
+                                    allowFullScreen
+                                    title="unityGame"
+                                    className="embed-responsive embed-responsive-16by9"></iframe>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
             </Row>
         </Container>
     )
