@@ -2,12 +2,11 @@
 
 .navbar {
     background: $primary-color;
-    font-family: $text-font;
+    font-family: $title-font;
 
-    a.titleFont {
-        font-family: $title-font;
-        color: $light-text;
-        font-size: 3rem;
+    img.title {
+        max-width: 250px;
+        padding: 10px 0 20px 30px;
     }
 
     a.titleFont:hover {

@@ -2,12 +2,14 @@
 @import "../../sass/_utilities.scss";
 @import "../../sass/variable.scss";
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font;
+    font-weight: $title-weight;
+}
 
-h1.pageTitle {
+h1 {
     font-size: 40px;
     line-height: 2.3rem !important;
-    padding: 100px 0 30px 0px;
-    color: black;
 }
 
 .header {
@@ -39,3 +41,35 @@ h1.pageTitle {
         100%{background-position:0% 88%}
     }
 }
+
+.cast {
+    padding-bottom: 50px;
+}
+
+.castTitle {
+    color: #01b3bf;
+}
+
+.gameContainer {
+
+    margin-top: 0 !important;
+
+    .game {
+        padding: 0 0 50px 0;
+    }
+}
+
+.iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+  }
+   
+  .iframe-container iframe {
+     border: 0;
+     height: 100%;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+  }

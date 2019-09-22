@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import StoneName from "../StoneName";
+import "./Modal.scss" 
 
 class StoneModal extends React.Component {
   constructor(props) {
@@ -22,28 +23,27 @@ class StoneModal extends React.Component {
           {this.props.stone ? (
         <>
         <StoneName onClick={this.props.toggle} />
-        <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
-          <ModalBody>
-            <h1>{this.props.stone.name}</h1>
-            <h4>Chakras</h4>
+        <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className} centered >
+          <ModalHeader toggle={this.toggle} cssModule={{'modal-title': 'w-100 text-center'}}>{this.props.stone.name}</ModalHeader>
+          <ModalBody cssModule={{'modal-text': 'w-100 text-center'}}>
+            <h6>Chakras</h6>
             <ul>
                 <li>{this.props.stone.chakra}</li>
             </ul>
             <span className="space" />
-            <h4>Color</h4>
+            <h6>Color</h6>
             <ul>
                 <li>{this.props.stone.color}</li>
             </ul>
             <span className="space" />
-            <h4>Properties</h4>
+            <h6>Properties</h6>
             <ul>
                 {this.props.stone.properties}
                 <li></li>
             </ul>
           </ModalBody>
-          <ModalFooter>
-            <Button color="primary">Add to favorites</Button>{' '}
+          <ModalFooter >
+            <Button color="primary" cssModule={{'modal-button': 'w-100 text-center'}}>Add to favorites</Button>{' '}
             {/* <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
           </ModalFooter>
         </Modal>
