@@ -3,36 +3,38 @@ import Filter from "../../components/Filter";
 import { Container, Col, Row } from "reactstrap";
 import StoneName from "../../components/StoneName";
 import stones from "../../stones.json";
-import StoneModal from "../../components/Modal"
+import StoneModal from "../../components/Modal";
+import "./Discover.scss"
 
 class Discover extends React.Component {
 
     state = {
         stones: [...stones],
-        modalOpen: false
+        modalOpen: false,
+        currentStone: null
     }
 
     stoneFilter = (section, query) => {
         let stonesCopy = [...stones];
         console.log(section, query);
-        let filterStones = stonesCopy.filter(stone => stone[section] == query);
+        let filterStones = stonesCopy.filter(stone => stone[section] === query);
         console.log(filterStones);
 
-        this.setState({stones: filterStones})
+        this.setState({ stones: filterStones })
     }
 
 
     toggle = () => {
         this.setState(prevState => ({
-          modalOpen: !prevState.modalOpen
+            modalOpen: !prevState.modalOpen
         }));
         console.log("modal open is clicked")
-      }
+    }
 
-    stoneModalOpen = (event) => {
+    stoneModalOpen = (event, stone) => {
         event.preventDefault();
-        this.setState({modalOpen: true});
-        console.log("fucking open")
+        this.setState({ modalOpen: true, currentStone: stone });
+
     }
 
     render() {
@@ -40,17 +42,40 @@ class Discover extends React.Component {
             <>
                 <Container fluid>
                     <Row>
-                        <Col sm={{ size: "auto", offset: 1 }}>
-                            <h1>
-                                Get Totally<br />
-                                STONED
-                   </h1>
-                        </Col>
-
-                        <Col sm="3">
+                        <Col sm={{ size: 3, offset: 1 }}>
+                            <h1 className="pageTitle">
+                                GET TOTALLY<br />
+                                <span className="header">STONED</span>
+                            </h1>
                             <Filter
                                 sortingFunction={this.stoneFilter}
                             />
+                        </Col>
+                        <Col sm="8">
+                            <Container>
+                            <Row>
+                            {this.state.stones.map(stone => (
+                                <StoneName
+                                    name={stone.name}
+                                    image={stone.image}
+                                    key={stone.id}
+                                    stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
+                                    toggle={this.toggle}
+                                />
+                            ))}
+                            <StoneModal
+                                modalOpen={this.state.modalOpen}
+                                toggle={this.toggle}
+                                isOpen={this.state.modalOpen}
+                                stone={this.state.currentStone}
+                                className="centered"
+                            />
+                            </Row>
+                            </Container>
+                        </Col>
+                    </Row>
+                    {/* <Col sm="3">
+
                         </Col>
                     </Row>
                     <Row>
@@ -59,16 +84,18 @@ class Discover extends React.Component {
                                 name={stone.name}
                                 image={stone.image}
                                 key={stone.id}
-                                onClick={this.stoneModalOpen}
+                                stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
                                 toggle={this.toggle}
                             />
                         ))}
-                        <StoneModal 
-                        modalOpen={this.state.modalOpen}
-                        toggle={this.toggle}
-                        isOpen={this.state.modalOpen}
+                        <StoneModal
+                            modalOpen={this.state.modalOpen}
+                            toggle={this.toggle}
+                            isOpen={this.state.modalOpen}
+                            stone={this.state.currentStone}
+                            className="centered"
                         />
-                    </Row>
+                    </Row> */}
                 </Container>
 
             </>

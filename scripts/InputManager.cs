@@ -42,7 +42,7 @@ public class InputManager : MonoBehaviour
                     draggingItem = true;
                     draggedObject = hit.transform.gameObject;
                     touchOffset = (Vector2)hit.transform.position - inputPosition;
-                    draggedObject.transform.localScale = new Vector3(.3f,.3f,.3f);
+                    draggedObject.transform.localScale = new Vector3(1.3f,1.3f,1.3f);
                 }
 
             }
@@ -57,6 +57,6 @@ public class InputManager : MonoBehaviour
 
     void DropItem() {
         draggingItem = false;
-        draggedObject.transform.localScale = new Vector3(.25f,.25f,.25f);
+        draggedObject.transform.localScale = new Vector3(1.15f,1.15f,1.15f);
     }
 }

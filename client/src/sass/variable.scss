@@ -1,6 +1,5 @@
-
 // page colors 
-$primary-color: rgb(3, 3, 3);
+$primary-color:black;
 $background-color: #F5F5F5;
 
 // text colors
@@ -8,7 +7,13 @@ $dark-text: #2F4F4F;
 $light-text: #F5F5F5;
 
 // fonts
-$text-font: 'Hind', serif;
-$title-font: 'Teko', sans-serif;
+$text-font: bureau-grot-wide, sans-serif !important;
+$text-weight: 300;
+$text-style: normal;
+
+$title-font: bureau-grot-compressed, sans-serif !important;
+$title-weight: 500;
+$title-style: normal;
+
 
 $footer-height: 8rem;

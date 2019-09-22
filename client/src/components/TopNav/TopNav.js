@@ -5,7 +5,6 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
@@ -56,15 +55,15 @@ export default class Navigation extends Component {
         return (
             <div>
                 <Navbar className="navbar" light expand="md">
-                    <NavbarBrand href="/" className="titleFont">STONED</NavbarBrand>
+                    <img href="/" className="title" src="../../../assets/images/logo.png" />
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                         <NavItem>
-                                <NavLink href="/runes" className="pages">Runes</NavLink>
+                                <NavLink href="/runes" className="pages">RUNES</NavLink>
                             </NavItem>
                         <NavItem>
-                                <NavLink href="/discover" className="pages">Discover</NavLink>
+                                <NavLink href="/discover" className="pages">DISCOVER</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/"><i className="fas fa-home light-text"></i></NavLink>
