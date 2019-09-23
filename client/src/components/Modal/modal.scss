@@ -3,7 +3,25 @@
 @import "../../sass/_utilities.scss";
 
 h5 {
-    font-size: 24px;
+    font-size: 40px !important;
+    text-transform: uppercase;
+    color: #01b3bf;
 }
 
-    
+h6 {
+    font-size: 24px !important;
+    text-transform: uppercase;
+    color: #1b2a49;
+}
+
+.modalStone{
+    padding: 20px 0 30px 0;
+}
+
+.modal-footer {
+    text-align: center;
+    align-content: center
+}
+button.btn.faveButton {
+    background-color: #1b2a49 !important;       
+} 

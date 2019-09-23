@@ -74,28 +74,6 @@ class Discover extends React.Component {
                             </Container>
                         </Col>
                     </Row>
-                    {/* <Col sm="3">
-
-                        </Col>
-                    </Row>
-                    <Row>
-                        {this.state.stones.map(stone => (
-                            <StoneName
-                                name={stone.name}
-                                image={stone.image}
-                                key={stone.id}
-                                stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
-                                toggle={this.toggle}
-                            />
-                        ))}
-                        <StoneModal
-                            modalOpen={this.state.modalOpen}
-                            toggle={this.toggle}
-                            isOpen={this.state.modalOpen}
-                            stone={this.state.currentStone}
-                            className="centered"
-                        />
-                    </Row> */}
                 </Container>
 
             </>

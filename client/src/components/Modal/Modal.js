@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import StoneName from "../StoneName";
-import "./Modal.scss" 
+import "./Modal.scss";
 
 class StoneModal extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class StoneModal extends React.Component {
         <>
         <StoneName onClick={this.props.toggle} />
         <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className} centered >
-          <ModalHeader toggle={this.toggle} cssModule={{'modal-title': 'w-100 text-center'}}>{this.props.stone.name}</ModalHeader>
+          <ModalHeader toggle={this.toggle} cssModule={{'modal-title': 'w-100 text-center'}}><img src={this.props.stone.image} className="modalStone" />{this.props.stone.name}</ModalHeader>
           <ModalBody cssModule={{'modal-text': 'w-100 text-center'}}>
             <h6>Chakras</h6>
             <ul>
@@ -42,8 +42,8 @@ class StoneModal extends React.Component {
                 <li></li>
             </ul>
           </ModalBody>
-          <ModalFooter >
-            <Button color="primary" cssModule={{'modal-button': 'w-100 text-center'}}>Add to favorites</Button>{' '}
+          <ModalFooter>
+            <Button className="faveButton">Add to favorites</Button>
             {/* <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
           </ModalFooter>
         </Modal>

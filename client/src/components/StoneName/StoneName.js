@@ -8,8 +8,7 @@ function StoneName(props) {
     return (
         <> 
                 <Col sm="4" onClick={props.stoneModalOpen}>
-                    {/* <h1>{props.name}</h1> */}
-                    <img src={props.image} alt={props.name} />
+                    <img src={props.image} alt={props.name} className="stone" />
                 </Col>
         </>
     )
