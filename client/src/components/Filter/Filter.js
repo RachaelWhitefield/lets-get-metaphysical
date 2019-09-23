@@ -27,8 +27,8 @@ class Filter extends React.Component {
 
   render() {
     return (
-      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} direction="down">
-        <DropdownToggle caret color={"#1b2a49"}>Filter Stones</DropdownToggle>
+      <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} direction="down" >
+        <DropdownToggle caret color={"#1b2a49"} className="filterButton">Filter Stones</DropdownToggle>
         <DropdownMenu>
           <DropdownItem header>CHAKRA</DropdownItem>
           <DropdownItem onClick={this.filterClick} value="root" data-section="chakra">Root</DropdownItem>

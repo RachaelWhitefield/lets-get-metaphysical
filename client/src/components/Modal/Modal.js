@@ -42,8 +42,8 @@ class StoneModal extends React.Component {
                 <li></li>
             </ul>
           </ModalBody>
-          <ModalFooter >
-            <Button color="primary" cssModule={{'modal-button': 'w-100 text-center'}}>Add to favorites</Button>{' '}
+          <ModalFooter>
+            <Button className="faveButton">Add to favorites</Button>
             {/* <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
           </ModalFooter>
         </Modal>
