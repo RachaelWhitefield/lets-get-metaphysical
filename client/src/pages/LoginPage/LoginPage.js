@@ -47,7 +47,6 @@ class LoginPage extends Component {
     render() {
     return (
         <section class="loginBox">
-        <div class="dark-overlay">
           <div class="signup-inner">
             <section class="container">
               
@@ -61,7 +60,6 @@ class LoginPage extends Component {
                 />
             </section>
           </div>
-        </div>
       </section>
     );
 }
