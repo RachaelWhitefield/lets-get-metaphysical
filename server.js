@@ -39,6 +39,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react-auth-simp
         if (err) throw err;
         console.log(`connected on port ${PORT}`.cyan)
     });
+    
 });
 
 

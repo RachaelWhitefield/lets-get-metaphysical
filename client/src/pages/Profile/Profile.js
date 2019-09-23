@@ -29,10 +29,14 @@ class Profile extends Component {
 
         API.isLoggedIn().then(user => {
             if (user.data.loggedIn) {
+                // console.log(user.data);
                 this.setState({
                     loggedIn: true,
-                    user: user.data.user
+                    user: user.data.user,
+                    // userId: user.data.user.id
                 });
+                // console.log(user);
+                this.loadFavs();
             }
         }).catch(err => {
             console.log(err);
@@ -40,7 +44,7 @@ class Profile extends Component {
 
         console.log(this.props)
 
-        this.loadFavs();
+        
     }
 
     loading() {
@@ -52,13 +56,16 @@ class Profile extends Component {
     }
 
     loadFavs= () => {
-        console.log('inside loadFavs')
+        // console.log('inside loadFavs')
         API.getFavs()
         .then(res => 
-            this.setState({ favorites: res.data, name: "", chakra: "", color: "", metaProps: "", image: ""})
+            this.setState({ favorites: res.data, name: "", chakra: "", color: "", metaProps: "", image: "", userId: ""})
             )
             .catch(err => console.log(err));
+           
     };
+
+
 
     deleteFav = id => {
         API.deleteFav(id)
@@ -98,7 +105,7 @@ class Profile extends Component {
                             <ul>
                                 {this.state.favorites.map(fav => (
                     // console.log({fav}),
-                            <ul>
+                            <ul key={fav._id}>
                             <strong>
                                 {fav.favorite_name}
                             </strong>
@@ -112,8 +119,9 @@ class Profile extends Component {
                                 {fav.favorite_metaProps}
                             </li>
                             <li>
-                                <img src={fav.favorite_image} />
+                                <img src={fav.favorite_image} alt={fav.favorite_name} />
                             </li>
+
                             <DeleteBtn onClick={() => this.deleteFav(fav._id)} />
                     </ul>
                     ))}

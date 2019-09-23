@@ -11,7 +11,7 @@ class StoneModal extends React.Component {
       favText: "Add to Favorites"
 
     };
-
+ 
   }
 
   handleClick = () => {

@@ -16,6 +16,9 @@ let Favorites = new Schema({
     },
     favorite_image: {
         type: String
+    },
+    userId: {
+        type: String
     }
 
 });
