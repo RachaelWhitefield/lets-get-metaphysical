@@ -24,7 +24,7 @@ class StoneModal extends React.Component {
         <>
         <StoneName onClick={this.props.toggle} />
         <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className} centered >
-          <ModalHeader toggle={this.toggle} cssModule={{'modal-title': 'w-100 text-center'}}>{this.props.stone.name}</ModalHeader>
+          <ModalHeader toggle={this.toggle} cssModule={{'modal-title': 'w-100 text-center'}}><img src={this.props.stone.image} className="modalStone" />{this.props.stone.name}</ModalHeader>
           <ModalBody cssModule={{'modal-text': 'w-100 text-center'}}>
             <h6>Chakras</h6>
             <ul>
