@@ -59,7 +59,7 @@ class Signup extends Component {
 
     render() {
         return (
-            <>
+            <div className="innerSignupBox">
                 
                 <h1 className="x-large" align="center">Sign Up</h1>
                 {this.props.message?(
@@ -89,7 +89,7 @@ class Signup extends Component {
                         <Link to="/login">Already have an account?  Log in here!</Link>
                     </p>
                 </Form>
-            </>
+            </div>
         );
     }
 }

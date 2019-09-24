@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Login from "../../components/Login";
 import "./LoginPage.scss";
 import API from "../../utils/API";
+import { Container } from "reactstrap";
 
 class LoginPage extends Component {
     state = {
@@ -46,9 +47,10 @@ class LoginPage extends Component {
     };
     render() {
     return (
-        <section class="loginBox">
+        <Container fluid id="loginBox">
+          
           <div class="signup-inner">
-            <section class="container">
+            {/* <section class="container"> */}
               
               
                 <Login
@@ -58,9 +60,9 @@ class LoginPage extends Component {
                   handleInputChange={this.handleInputChange}
                   message={this.state.message}
                 />
-            </section>
+            {/* </section> */}
           </div>
-      </section>
+      </Container>
     );
 }
 }

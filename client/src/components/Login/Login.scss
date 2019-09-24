@@ -4,20 +4,25 @@
 @import "../../sass/_utilities.scss";
 
 #loginBtn {
-    margin-top: 50px;
-    font-family: $text-font;
+    margin: 1.2rem auto;
+    font-family: bureau-grot-wide, sans-serif !important;
     background-color: black;
-    margin: 30px;
+    width: auto;
     
 }
 
-.loginBox {
+#loginBox {
     padding: 90px 200px;
     font-family: $text-font;
+    
 }
 
 .signup-inner {
     background-color: rgba(255,255,255, 0.6);
+}
+
+.innerLoginBox {
+    padding: 40px;
 }
 
 

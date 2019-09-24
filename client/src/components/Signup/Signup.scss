@@ -4,12 +4,13 @@
 @import "../../sass/_utilities.scss";
 
 #signupBtn {
-    margin: 1.2rem 3rem;
-    font-family: $text-font;
+    margin: 1.2rem auto;
+    font-family: bureau-grot-wide, sans-serif !important;
     background-color: black;
+    width: auto;
 }
 
-.signupBox {
+#signupBox {
     padding: 90px 200px;
     font-family: $text-font;
 
@@ -17,4 +18,8 @@
 
 .signup-inner {
     background-color: rgba(255,255,255, 0.6);
+}
+
+.innerSignupBox {
+    padding: 40px;
 }
