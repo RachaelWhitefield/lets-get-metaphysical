@@ -17,7 +17,7 @@ function Runes() {
                     <Container>
                         <Row>
                             <Col sm="3" className="cast">
-                                <img src="../../../assets/images/cross.jpg" />
+                                <img src="../../../assets/images/cross.png" />
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">RUNIC CROSS CAST</h3>
@@ -26,7 +26,7 @@ function Runes() {
                         </Row>
                         <Row>
                             <Col sm="3" className="cast">
-                                <img src="../../../assets/images/norn.jpg" />
+                                <img src="../../../assets/images/norn.png" />
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">NORN CAST</h3>
@@ -35,7 +35,7 @@ function Runes() {
                         </Row>
                         <Row>
                             <Col sm="3">
-                                <img src="../../../assets/images/single.jpg" />
+                                <img src="../../../assets/images/single.png" />
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">SINGLE CAST</h3>
