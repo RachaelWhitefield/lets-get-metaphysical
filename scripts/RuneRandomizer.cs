@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RuneRandomizer : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class RuneRandomizer : MonoBehaviour
     [SerializeField] Sprite[] runeCharacter;
     // [SerializeField] int rune;
     public string currentRune;
-    [SerializeField] Text textComponent;
+    // [SerializeField] Text textComponent;
+    [SerializeField] TextMeshProUGUI textComponent;
     [SerializeField] State startingState;
    
     SpriteRenderer mySprite;
@@ -48,8 +50,8 @@ public class RuneRandomizer : MonoBehaviour
 private void OnMouseOver() {
 
     if(currentRune != null) {
-    //  stateManager = FindObjectOfType<StateManager>();
-         var nextStates = state.GetNextState();
+   
+        var nextStates = state.GetNextState();
 
         if(currentRune == "a") {
             state = nextStates[0];
@@ -61,12 +63,48 @@ private void OnMouseOver() {
             state = nextStates[3];
         } else if(currentRune == "g") {
             state = nextStates[4];
-        }
+        } else if(currentRune == "h") {
+            state = nextStates[5];
+        } else if(currentRune == "i") {
+            state = nextStates[6];
+        } else if(currentRune == "j") {
+            state = nextStates[7];
+        } else if(currentRune == "k") {
+            state = nextStates[8];
+        } else if(currentRune == "l") {
+            state = nextStates[9];
+        } else if(currentRune == "m") {
+            state = nextStates[10];
+        } else if(currentRune == "n") {
+            state = nextStates[11];
+        } else if(currentRune == "o") {
+            state = nextStates[12];
+        } else if(currentRune == "p") {
+            state = nextStates[13];
+        } else if(currentRune == "q") {
+            state = nextStates[14];
+        } else if(currentRune == "r") {
+            state = nextStates[15];
+        } else if(currentRune == "s") {
+            state = nextStates[16];
+        } else if(currentRune == "t") {
+            state = nextStates[17];
+        } else if(currentRune == "u") {
+            state = nextStates[18];
+        } else if(currentRune == "v") {
+            state = nextStates[19];
+        } else if(currentRune == "w") {
+            state = nextStates[20];
+        } else if(currentRune == "x") {
+            state = nextStates[21];
+        } else if(currentRune == "c") {
+            state = nextStates[22];
+        } else if(currentRune == "e") {
+            state = nextStates[23];
+        } 
             
         textComponent.text = state.GetStateInfo();
 
-
-        //    Debug.Log(currentRune);
     } else {
         Debug.Log("No such Item");
     }
