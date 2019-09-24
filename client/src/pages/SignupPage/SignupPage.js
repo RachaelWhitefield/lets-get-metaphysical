@@ -52,9 +52,7 @@ class SignupPage extends Component {
     return (
       <Container fluid id="signupBox">
           <div class="signup-inner">
-            {/* <section class="container"> */}
-              
-                <Signup
+            <Signup
                   username={this.state.username}
                   password={this.state.password}
                   confirmPassword={this.state.confirmPassword}
@@ -62,7 +60,6 @@ class SignupPage extends Component {
                   handleInputChange={this.handleInputChange}
                   message={this.state.message}
                 />
-            {/* </section> */}
           </div>
       </Container>
     );

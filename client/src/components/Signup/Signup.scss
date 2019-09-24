@@ -4,10 +4,10 @@
 @import "../../sass/_utilities.scss";
 
 #signupBtn {
-    margin: 1.2rem auto;
+    margin-top: 10px;
+    
     font-family: bureau-grot-wide, sans-serif !important;
     background-color: black;
-    width: auto;
 }
 
 #signupBox {
@@ -23,3 +23,4 @@
 .innerSignupBox {
     padding: 40px;
 }
+
