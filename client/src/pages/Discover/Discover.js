@@ -4,7 +4,7 @@ import { Container, Col, Row } from "reactstrap";
 import StoneName from "../../components/StoneName";
 // import stones from "../../stones.json";
 import StoneModal from "../../components/Modal";
-import { gemStones } from "../../utils/GraphQLAPI";
+import { getGemstones } from "../../utils/GraphQLAPI";
 import "./Discover.scss"
 
 class Discover extends React.Component {
@@ -20,7 +20,7 @@ class Discover extends React.Component {
       }
 
       async getApiGemstones() {
-        const allStones = await gemStones();
+        const allStones = await getGemstones();
     
         const stones = [];
         allStones.forEach(stone => {
@@ -38,18 +38,13 @@ class Discover extends React.Component {
             });
           }
         });
-        // console.log('This is all stones', allStones);
         this.setState({ stones });
-        // console.log({stones})
       }
 
      stoneFilter = (section, query, allStones) => {
-          // let originalStones = [...this.state.stones];
          let stonesCopy = [...this.state.stones];
          if (query === "all") {
             this.getApiGemstones()
-            //  this.setState({ stones: allStones })
-            //  console.log(allStones);
          } else {
              let filterStones = stonesCopy.filter(stone => stone[section].toLowerCase() === query);
              this.setState({ stones: filterStones })
@@ -61,7 +56,7 @@ class Discover extends React.Component {
         this.setState(prevState => ({
             modalOpen: !prevState.modalOpen
         }));
-        console.log("modal open is clicked")
+        // console.log("modal open is clicked")
     }
 
     stoneModalOpen = (event, stone) => {

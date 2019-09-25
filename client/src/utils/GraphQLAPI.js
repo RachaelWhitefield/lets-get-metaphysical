@@ -1,6 +1,6 @@
 const endpointURL = "https://radiant-coast-91248.herokuapp.com/graphql";
 
-export async function gemStones() {
+export async function getGemstones() {
   const response = await fetch(endpointURL, {
     method: "POST",
     headers: { "content-type": "application/json" },
