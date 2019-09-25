@@ -16,11 +16,14 @@ class Discover extends React.Component {
 
     stoneFilter = (section, query) => {
         let stonesCopy = [...stones];
-        console.log(section, query);
-        let filterStones = stonesCopy.filter(stone => stone[section] === query);
-        console.log(filterStones);
+        if (query === "all") {
+            this.setState({ stones: stonesCopy})
+            console.log(stonesCopy);
+        } else {
+            let filterStones = stonesCopy.filter(stone => stone[section] === query);
+            this.setState({ stones: filterStones })
+        }
 
-        this.setState({ stones: filterStones })
     }
 
     toggle = () => {
