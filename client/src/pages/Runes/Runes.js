@@ -48,7 +48,7 @@ function Runes() {
                     <Row>
                         <Col lg="12" className="game">
                             <div className="iframe-container">
-                                <iframe src="https://i.simmer.io/@SummoningDark/~788a3462-18f6-4f9a-0d4e-e5bd24984062"
+                                <iframe src="https://theguardingdark.github.io/runestones/"
                                     allow="autoplay; encrypted-media"
                                     allowFullScreen
                                     title="unityGame"
