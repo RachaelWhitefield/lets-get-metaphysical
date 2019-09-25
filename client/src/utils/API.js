@@ -32,7 +32,8 @@ export default {
   },
 
  getFavs: function() {
-  return axios.get("/api/favorites");
+   console.log('inside api getFavs')
+  return axios.get("/api/favorites/");
  },
 
 //  getFav: function(id) {

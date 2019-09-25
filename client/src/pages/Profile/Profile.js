@@ -56,7 +56,7 @@ class Profile extends Component {
     }
 
     loadFavs= () => {
-        // console.log('inside loadFavs')
+        console.log('inside loadFavs')
         API.getFavs()
         .then(res => 
             this.setState({ favorites: res.data, name: "", chakra: "", color: "", metaProps: "", image: "", userId: ""})

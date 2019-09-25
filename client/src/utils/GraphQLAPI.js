@@ -1,4 +1,4 @@
-const endpointURL = "http://localhost:8080/graphql";
+const endpointURL = "https://radiant-coast-91248.herokuapp.com/graphql";
 
 export async function getGemstones() {
   const response = await fetch(endpointURL, {
@@ -15,7 +15,7 @@ export async function getGemstones() {
                     metaProps
                     color
                     image
-              
+                    imageText
                   }
               
                 }

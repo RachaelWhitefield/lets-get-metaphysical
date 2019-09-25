@@ -31,24 +31,25 @@ class Discover extends React.Component {
                 name: gemstone.name, 
                 properties: gemstone.metaProps, 
                 color: gemstone.color, 
-                image: gemstone.image
+                image: gemstone.image,
+                imageText: gemstone.imageText
               })
             })
         }
 
         
     });
-    console.log('This is all stones', allStones);
+    // console.log('This is all stones', allStones);
     this.setState({ stones });
-    console.log({stones})
+    // console.log({stones})
   }
 
   stoneFilter = (section, query) => {
     let stonesCopy = [...this.state.stones];
-    console.log(stonesCopy)
-    console.log(section, query);
+    // console.log(stonesCopy)
+    // console.log(section, query);
     let filterStones = stonesCopy.filter(stone => stone[section] === query);
-    console.log(filterStones);
+    // console.log(filterStones);
 
     this.setState({ stones: filterStones });
   };
@@ -57,7 +58,7 @@ class Discover extends React.Component {
     this.setState(prevState => ({
       modalOpen: !prevState.modalOpen
     }));
-    console.log("modal open is clicked");
+    // console.log("modal open is clicked");
   };
 
   stoneModalOpen = (event, stone) => {
@@ -85,8 +86,8 @@ class Discover extends React.Component {
           <Row>
             {this.state.stones.map(stone => (
               <StoneName
-                name={stone.name}
-                image={stone.image}
+                // name={stone.name}
+                image={stone.imageText}
                 key={stone.id}
                 stoneModalOpen={event => this.stoneModalOpen(event, stone)}
                 toggle={this.toggle}
