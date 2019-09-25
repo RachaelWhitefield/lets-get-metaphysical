@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import API from "../../utils/API";
 import "./Home.scss";
 
@@ -29,24 +29,50 @@ class Home extends Component {
 
   render() {
     return (
-    <div>
-         <section className="landing">
-        <div className="dark-overlay">
-            <div className="landing-inner">
-                <h1 className="x-large">STONED</h1>
-                <p className="lead">Space, the final frontier. These are the voyages of the Starship Enterprise. Its
-                    five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
-                    boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
-                    actually our duty to future generations and their quest to ensure the survival of the human species.
+      <>
+        <section class="landing">
+          <div class="landing-inner">
+            <Container>
+              <Row centered>
+                <Col sm="12" md={{ size: 6, offset: 3 }}>
+                  <h1 className="pageTitle">
+                    <span className="header">GET STONED</span>
+                  </h1>
+                  <p class="lead">Space, the final frontier. These are the voyages of the Starship Enterprise. Its
+                      five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
+                      boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
+                      actually our duty to future generations and their quest to ensure the survival of the human species.
                 </p>
-                <div className="buttons">
-                    <a href="/signup" className="btn btn-primary">Sign Up</a>
-                    <a href="/login" className="btn btn">Login</a>
-                </div>
-            </div>
-        </div>
-    </section>
-      </div>
+                  <div class="buttons">
+                    <a href="/signup" class="btn homebtn">Sign Up</a>
+                    <a href="/login" class="btn homebtn">Login</a>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        </section>
+        
+        <div className="greyContainer">
+        <Row>
+                <Col sm="12" md="6" className="section runed">
+                  <h2>GET RUNED</h2>
+                  <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its
+                      five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
+                      boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
+                      actually our duty to future generations and their quest to ensure the survival of the human species.</p>
+                </Col>
+                <Col sm="12" md="6" className="section stoned">
+                  <h2>GET RUNED</h2>
+                  <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its
+                      five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
+                      boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
+                      actually our duty to future generations and their quest to ensure the survival of the human species.</p>
+                </Col>
+              </Row>
+              </div>
+                
+      </>
 
     );
   }

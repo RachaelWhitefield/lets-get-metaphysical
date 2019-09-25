@@ -2,7 +2,13 @@
 
 .profilePage {
     margin: 0 auto;
-    margin-top: 25px;
+
+    #discover {
+        margin-top: 25px;
+        background-color: black !important;
+
+        
+    }
 
     .noUser {
         width: 280px;
@@ -26,15 +32,19 @@
             height: 200px;
             width: 200px;
             margin: 0 auto;
-            // margin-top: 25px;
+            
         }
     }
 
     .profileBox {
         #userTitle {
-            text-align: center
+            text-align: center;
+            padding: 10px;
+            margin: 20px;
         }
     }
-
-
+    #userTitle {
+        text-transform: uppercase;
+    }
 }
+

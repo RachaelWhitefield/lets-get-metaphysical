@@ -5,7 +5,6 @@ import {
     Collapse,
     Navbar,
     NavbarToggler,
-    NavbarBrand,
     Nav,
     NavItem,
     NavLink,
@@ -56,7 +55,7 @@ export default class Navigation extends Component {
         return (
             <div>
                 <Navbar className="navbar" light expand="md">
-                    <NavbarBrand href="/" className="titleFont">STONED</NavbarBrand>
+                    <NavLink href="/"><img className="title" src="../../../assets/images/logo.png" /></NavLink>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
@@ -64,10 +63,10 @@ export default class Navigation extends Component {
                                 <NavLink href="/profile" className="pages">Profile</NavLink>
                             </NavItem>
                         <NavItem>
-                                <NavLink href="/runes" className="pages">Runes</NavLink>
+                                <NavLink href="/runes" className="pages">RUNES</NavLink>
                             </NavItem>
                         <NavItem>
-                                <NavLink href="/discover" className="pages">Discover</NavLink>
+                                <NavLink href="/discover" className="pages">DISCOVER</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/"><i className="fas fa-home light-text"></i></NavLink>
@@ -92,7 +91,7 @@ export default class Navigation extends Component {
                                                 <NavLink href="/login">Login</NavLink>
                                             </DropdownItem>
                                             <DropdownItem>
-                                                <NavLink href="/signup">Signup</NavLink>
+                                                <NavLink href="/signup">Sign Up</NavLink>
                                             </DropdownItem>
                                         </>
                                     )}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import StoneName from "../StoneName";
 import API from "../../utils/API";
+import "./ModalStyle.scss";
 
 class StoneModal extends React.Component {
   constructor(props) {
@@ -38,29 +39,27 @@ class StoneModal extends React.Component {
           {this.props.stone ? (
         <>
         <StoneName onClick={this.props.toggle} />
-        <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>{this.props.stone.name}</ModalHeader>
-          <ModalBody>
-            <h1>{this.props.stone.name}</h1>
-            <h4>Chakras</h4>
+        <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className} centered >
+          <ModalHeader toggle={this.toggle} cssModule={{'modal-title': 'w-100 text-center'}}><img src={this.props.stone.image} alt={this.props.stone.name} className="modalStone" />{this.props.stone.name}</ModalHeader>
+          <ModalBody cssModule={{'modal-text': 'w-100 text-center'}}>
+            <h6>Chakras</h6>
             <ul>
                 <li>{this.props.stone.chakra}</li>
             </ul>
             <span className="space" />
-            <h4>Color</h4>
+            <h6>Color</h6>
             <ul>
                 <li>{this.props.stone.color}</li>
             </ul>
             <span className="space" />
-            <h4>Properties</h4>
+            <h6>Properties</h6>
             <ul>
                 {this.props.stone.properties}
                 <li></li>
             </ul>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.handleClick}>{this.state.favText}</Button>{' '}
-            {/* <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
+            <Button color="primary" className="faveButton" onClick={this.handleClick}>{this.state.favText}</Button>
           </ModalFooter>
         </Modal>
         </>

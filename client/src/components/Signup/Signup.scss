@@ -1,0 +1,28 @@
+@import "../../sass/variable.scss";
+@import "../../sass/_config.scss";
+@import "../../sass/_form.scss";
+@import "../../sass/_utilities.scss";
+
+#signupBtn {
+    font-family: bureau-grot-wide, sans-serif !important;
+    background-color: black;
+}
+
+#signupBox {
+    padding: 90px 200px;
+    font-family: $text-font;
+
+}
+
+.signup-inner {
+    background-color: rgba(255,255,255, 0.6);
+}
+
+.innerSignupBox {
+    padding: 40px;
+    #signupBtn {
+        display: block;
+        margin: 20px auto !important;
+    }
+}
+

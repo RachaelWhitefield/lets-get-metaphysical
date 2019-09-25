@@ -1,2 +1,42 @@
+@import "../../sass/_config.scss";
+@import "../../sass/_utilities.scss";
 @import "../../sass/variable.scss";
+
+
+h1.pageTitle {
+    font-size: 40px;
+    line-height: 2.3rem !important;
+    padding: 100px 0 30px 0px;
+    color: #1b2a49;
+}
+
+.header {
+    font-size: 12vh;
+    line-height: 8rem;
+    background: linear-gradient(233deg, #8042a5, #3b156c, #016a88, #01b3bf, #81db38);
+    background-size: 600% 600%;
+    background-clip: text;
+    color: transparent;
+    
+    -webkit-background-clip: text;
+    -webkit-animation: AnimationName 26s ease infinite;
+    -moz-animation: AnimationName 26s ease infinite;
+    animation: AnimationName 26s ease infinite;
+    
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 88%}
+        50%{background-position:100% 13%}
+        100%{background-position:0% 88%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 88%}
+        50%{background-position:100% 13%}
+        100%{background-position:0% 88%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 88%}
+        50%{background-position:100% 13%}
+        100%{background-position:0% 88%}
+    }
+}
 

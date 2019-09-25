@@ -23,11 +23,14 @@
 }
 
 body {
+    height: 100vh;
+    width: 100vw;
     font-family: $text-font;
     font-size: 1rem;
     line-height: 1.6;
-    background-color: #fff;
+    background: url("/assets/images/smoke.gif") no-repeat center center/cover;
     color: #333;
+    
 }
 
 a {
@@ -37,6 +40,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $title-font;
+    font-weight: $title-weight;
 }
 
 ul {
@@ -58,7 +62,6 @@ ul {
     z-index: 1;
     width: 100%;
     top: 0;
-    border-bottom: solid 1px $primary-color;
     opacity: 0.9;
 
     ul {
@@ -79,11 +82,13 @@ ul {
 // Landing
 .landing {
     position: relative;
-    background: url("/assets/images/landingPage.jpeg") no-repeat center center/cover;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7), 
+        rgba(255, 255, 255, 0.7)), url("/assets/images/lanju-fotografie-ogt_WYSY9As-unsplash.jpg") no-repeat center center/cover;
     height: 90vh;
 
     &-inner {
-        color: #fff;
+        color: #1b2a49;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -93,5 +98,21 @@ ul {
         justify-content: center;
         text-align: center;
     }
+}
+
+.btn.homebtn {
+    margin: 10px;
+    color: white !important;
+    background-color: #1b2a49 !important;
+}
+
+.greyContainer {
+    background-color: #eee;
+    max-height: auto;
+}
+
+.section {
+    padding: 100px 100px !important;
+    margin: 0 auto;
 }
 

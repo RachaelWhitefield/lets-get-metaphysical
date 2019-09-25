@@ -1,9 +1,9 @@
 [{
-    "name": "black tourmaline",
+    "name": "amethyst",
     "color": "black",
     "chakra": "third eye",
     "properties": ["health", "wisdom", "protection"],
-    "image": "https://via.placeholder.com/150x200",
+    "image": "../../assets/images/stones/amethyst-text.png",
     "isFavorite":"false",
     "id": "01"
 },{
@@ -11,7 +11,7 @@
     "color": "pink",
     "chakra": "heart",
     "properties": ["bananas", "laughter", "whatcha know boutdat"],
-    "image": "https://via.placeholder.com/150x200",
+    "image": "../../assets/images/stones/aquamarine-text.png",
     "isFavorite":"false",
     "id": "02" 
 },{
@@ -19,7 +19,127 @@
     "color": "orange",
     "chakra": "root",
     "properties": ["healthy sex life", "money", "boogers"],
-    "image": "https://via.placeholder.com/150x200",
+    "image": "../../assets/images/stones/azurite-text.png",
     "isFavorite":"false",
     "id": "03"
+},{
+    "name": "amethyst",
+    "color": "black",
+    "chakra": "third eye",
+    "properties": ["health", "wisdom", "protection"],
+    "image": "../../assets/images/stones/bandedIron-text.png",
+    "isFavorite":"false",
+    "id": "04"
+},{
+    "name": "rose quartz",
+    "color": "pink",
+    "chakra": "heart",
+    "properties": ["bananas", "laughter", "whatcha know boutdat"],
+    "image": "../../assets/images/stones/carnelian-text.png",
+    "isFavorite":"false",
+    "id": "05" 
+},{
+    "name": "carnelian",
+    "color": "orange",
+    "chakra": "root",
+    "properties": ["healthy sex life", "money", "boogers"],
+    "image": "../../assets/images/stones/citrine-text.png",
+    "isFavorite":"false",
+    "id": "06"
+},{
+    "name": "amethyst",
+    "color": "black",
+    "chakra": "third eye",
+    "properties": ["health", "wisdom", "protection"],
+    "image": "../../assets/images/stones/hematite-text.png",
+    "isFavorite":"false",
+    "id": "07"
+},{
+    "name": "rose quartz",
+    "color": "pink",
+    "chakra": "heart",
+    "properties": ["bananas", "laughter", "whatcha know boutdat"],
+    "image": "../../assets/images/stones/lepidolite-text.png",
+    "isFavorite":"false",
+    "id": "08" 
+},{
+    "name": "carnelian",
+    "color": "orange",
+    "chakra": "root",
+    "properties": ["healthy sex life", "money", "boogers"],
+    "image": "../../assets/images/stones/malachite-text.png",
+    "isFavorite":"false",
+    "id": "09"
+},{
+    "name": "amethyst",
+    "color": "black",
+    "chakra": "third eye",
+    "properties": ["health", "wisdom", "protection"],
+    "image": "../../assets/images/stones/mookiteJasper-text.png",
+    "isFavorite":"false",
+    "id": "10"
+},{
+    "name": "rose quartz",
+    "color": "pink",
+    "chakra": "heart",
+    "properties": ["bananas", "laughter", "whatcha know boutdat"],
+    "image": "../../assets/images/stones/morganite-text.png",
+    "isFavorite":"false",
+    "id": "11" 
+},{
+    "name": "carnelian",
+    "color": "orange",
+    "chakra": "root",
+    "properties": ["healthy sex life", "money", "boogers"],
+    "image": "../../assets/images/stones/obsidian-text.png",
+    "isFavorite":"false",
+    "id": "12"
+},{
+    "name": "amethyst",
+    "color": "black",
+    "chakra": "third eye",
+    "properties": ["health", "wisdom", "protection"],
+    "image": "../../assets/images/stones/quartz-text.png",
+    "isFavorite":"false",
+    "id": "13"
+},{
+    "name": "rose quartz",
+    "color": "pink",
+    "chakra": "heart",
+    "properties": ["bananas", "laughter", "whatcha know boutdat"],
+    "image": "../../assets/images/stones/redJasper-text.png",
+    "isFavorite":"false",
+    "id": "14" 
+},{
+    "name": "carnelian",
+    "color": "orange",
+    "chakra": "root",
+    "properties": ["healthy sex life", "money", "boogers"],
+    "image": "../../assets/images/stones/roseQuartz-text.png",
+    "isFavorite":"false",
+    "id": "15"
+},{
+    "name": "amethyst",
+    "color": "black",
+    "chakra": "third eye",
+    "properties": ["health", "wisdom", "protection"],
+    "image": "../../assets/images/stones/selenite-text.png",
+    "isFavorite":"false",
+    "id": "16"
+},{
+    "name": "rose quartz",
+    "color": "pink",
+    "chakra": "heart",
+    "properties": ["bananas", "laughter", "whatcha know boutdat"],
+    "image": "../../assets/images/stones/smokyQuartz-text.png",
+    "isFavorite":"false",
+    "id": "17" 
+},{
+    "name": "carnelian",
+    "color": "orange",
+    "chakra": "root",
+    "properties": ["healthy sex life", "money", "boogers"],
+    "image": "../../assets/images/stones/yellowDenburite-text.png",
+    "isFavorite":"false",
+    "id": "18"
 }]

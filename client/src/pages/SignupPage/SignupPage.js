@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Signup from "../../components/Signup";
 import API from "../../utils/API";
 import "./SignupPage.scss";
+import { Container } from "reactstrap";
 
 class SignupPage extends Component {
   state = {
@@ -34,11 +35,11 @@ class SignupPage extends Component {
             loggedIn: true,
             user: user.data.user
           });
-          console.log("log in successful");
+          // console.log("log in successful");
           window.location.href = "/profile";
         } else {
-          console.log("something went wrong :(");
-          console.log(user.data);
+          // console.log("something went wrong :(");
+          // console.log(user.data);
           this.setState({
             message: user.data
           });
@@ -49,14 +50,9 @@ class SignupPage extends Component {
 
   render() {
     return (
-      <section className="signup">
-        <div className="dark-overlay">
+      <Container fluid id="signupBox">
           <div className="signup-inner">
-            <section className="container">
-              <h1 className="x-large text-primary">Sign Up</h1>
-              <p className="lead">Create Your Profile</p>
-              
-                <Signup
+            <Signup
                   username={this.state.username}
                   password={this.state.password}
                   confirmPassword={this.state.confirmPassword}
@@ -64,11 +60,8 @@ class SignupPage extends Component {
                   handleInputChange={this.handleInputChange}
                   message={this.state.message}
                 />
-             
-            </section>
           </div>
-        </div>
-      </section>
+      </Container>
     );
   }
 }

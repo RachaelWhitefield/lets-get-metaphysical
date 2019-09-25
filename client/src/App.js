@@ -8,7 +8,6 @@ import NoMatch from "./pages/NoMatch";
 import TopNav from "./components/TopNav";
 import Footer from "./components/Footer";
 import SignupPage from "./pages/SignupPage";
-// import {Container, Col, Row} from "reactstrap";
 import Discover from "./pages/Discover";
   
 function App() {
