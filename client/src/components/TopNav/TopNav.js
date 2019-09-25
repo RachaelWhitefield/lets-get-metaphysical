@@ -55,7 +55,7 @@ export default class Navigation extends Component {
         return (
             <div>
                 <Navbar className="navbar" light expand="md">
-                    <img href="/" className="title" src="../../../assets/images/logo.png" />
+                    <NavLink href="/"><img className="title" src="../../../assets/images/logo.png" /></NavLink>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>

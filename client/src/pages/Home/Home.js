@@ -32,7 +32,7 @@ class Home extends Component {
     <div>
         <section class="landing">
             <div class="landing-inner">
-                <h1 class="x-large">STONED</h1>
+                <h1 class="x-large">GET STONED</h1>
                 <p class="lead">Space, the final frontier. These are the voyages of the Starship Enterprise. Its
                     five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
                     boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
