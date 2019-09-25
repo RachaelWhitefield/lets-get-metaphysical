@@ -23,7 +23,6 @@ class Discover extends React.Component {
         this.setState({ stones: filterStones })
     }
 
-
     toggle = () => {
         this.setState(prevState => ({
             modalOpen: !prevState.modalOpen

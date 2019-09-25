@@ -41,7 +41,7 @@ class Home extends Component {
                 </p>
                 <div class="buttons">
                     <a href="/signup" class="btn btn-primary">Sign Up</a>
-                    <a href="/login" class="btn btn">Login</a>
+                    <a href="/login" class="btn btn-primary">Login</a>
                 </div>
             </div>
         </div>
