@@ -57,7 +57,7 @@ class Profile extends Component {
                     <div className="noUser">
                         {!this.state.loading ? (
                             <>
-                                <h1>Please log in</h1>
+                                <h1>Please Log In</h1>
                                 <Link className="loginLink" to="/login"><Button className="loginBtn">Login</Button></Link>
                             </>
                         ) : (
