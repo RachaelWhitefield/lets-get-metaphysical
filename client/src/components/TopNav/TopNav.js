@@ -55,10 +55,13 @@ export default class Navigation extends Component {
         return (
             <div>
                 <Navbar className="navbar" light expand="md">
-                    <NavLink href="/"><img className="title" src="../../../assets/images/logo.png" /></NavLink>
+                    <NavLink href="/"><img className="title" src="../../../assets/images/logo.png" alt="Get Stoned Logo"/></NavLink>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink href="/profile" className="pages">Profile</NavLink>
+                            </NavItem>
                         <NavItem>
                                 <NavLink href="/runes" className="pages">RUNES</NavLink>
                             </NavItem>

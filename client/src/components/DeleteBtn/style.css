@@ -1,0 +1,8 @@
+.delete-btn {
+  background-color: purple;
+  line-height: 30px;
+  margin: auto;
+  padding: 5px;
+  /* float: right; */
+  color: #e74944;
+}

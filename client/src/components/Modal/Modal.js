@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import StoneName from "../StoneName";
+import API from "../../utils/API";
 import "./ModalStyle.scss";
 
 class StoneModal extends React.Component {
@@ -8,13 +9,28 @@ class StoneModal extends React.Component {
     super(props);
     this.state = {
       modalOpen: false,
-      isFavorite: false
-      //false is add to faves and true is remove from favorites
+      favText: "Add to Favorites"
+
     };
-
-
+ 
   }
 
+  handleClick = () => {
+
+    let newText = this.state.favText === "Add to Favorites" ? "Saved to Favorites" : "Add to Favorites"
+    this.setState({favText: newText})
+   
+      API.saveFav({
+        favorite_name: this.props.stone.name,
+        favorite_color: this.props.stone.color,
+        favorite_chakra: this.props.stone.chakra,
+        favorite_metaProps: this.props.stone.properties,
+        favorite_image: this.props.stone.image,
+        }).then(res => console.log('success', res.data))
+        .catch(err => console.log(err));
+      
+    
+};  
 
 
   render() {
@@ -24,7 +40,7 @@ class StoneModal extends React.Component {
         <>
         <StoneName onClick={this.props.toggle} />
         <Modal isOpen={this.props.modalOpen} toggle={this.props.toggle} className={this.props.className} centered >
-          <ModalHeader toggle={this.toggle} cssModule={{'modal-title': 'w-100 text-center'}}><img src={this.props.stone.image} className="modalStone" />{this.props.stone.name}</ModalHeader>
+          <ModalHeader toggle={this.toggle} cssModule={{'modal-title': 'w-100 text-center'}}><img src={this.props.stone.image} alt={this.props.stone.name} className="modalStone" />{this.props.stone.name}</ModalHeader>
           <ModalBody cssModule={{'modal-text': 'w-100 text-center'}}>
             <h6>Chakras</h6>
             <ul>
@@ -43,8 +59,7 @@ class StoneModal extends React.Component {
             </ul>
           </ModalBody>
           <ModalFooter>
-            <Button className="faveButton">Add to favorites</Button>
-            {/* <Button color="secondary" onClick={this.toggle}>Cancel</Button> */}
+            <Button color="primary" className="faveButton" onClick={this.handleClick}>{this.state.favText}</Button>
           </ModalFooter>
         </Modal>
         </>
@@ -53,5 +68,6 @@ class StoneModal extends React.Component {
     );
   }
 }
+
 
 export default StoneModal;

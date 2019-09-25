@@ -49,7 +49,7 @@ class LoginPage extends Component {
     return (
         <Container fluid id="loginBox">
           
-          <div class="signup-inner">
+          <div className="signup-inner">
             {/* <section class="container"> */}
               
               

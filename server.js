@@ -8,7 +8,9 @@ const session = require("express-session");
 const passport = require("passport");
 const logger = require("morgan");
 const flash = require('connect-flash');
+const cors = require('cors');
 
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(logger("dev"));
@@ -37,6 +39,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react-auth-simp
         if (err) throw err;
         console.log(`connected on port ${PORT}`.cyan)
     });
+    
 });
 
 
