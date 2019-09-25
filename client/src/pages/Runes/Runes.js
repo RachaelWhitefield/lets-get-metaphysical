@@ -17,7 +17,7 @@ function Runes() {
                     <Container>
                         <Row>
                             <Col sm="3" className="cast">
-                                <img src="../../../assets/images/cross.png" />
+                                <img src="../../../assets/images/cross.png" alt="cross"/>
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">RUNIC CROSS CAST</h3>
@@ -26,7 +26,7 @@ function Runes() {
                         </Row>
                         <Row>
                             <Col sm="3" className="cast">
-                                <img src="../../../assets/images/norn.png" />
+                                <img src="../../../assets/images/norn.png" alt="norn"/>
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">NORN CAST</h3>
@@ -35,7 +35,7 @@ function Runes() {
                         </Row>
                         <Row>
                             <Col sm="3">
-                                <img src="../../../assets/images/single.png" />
+                                <img src="../../../assets/images/single.png" alt="single"/>
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">SINGLE CAST</h3>
@@ -48,7 +48,7 @@ function Runes() {
                     <Row>
                         <Col lg="12" className="game">
                             <div className="iframe-container">
-                                <iframe src="https://i.simmer.io/@SummoningDark/~788a3462-18f6-4f9a-0d4e-e5bd24984062"
+                                <iframe src="https://theguardingdark.github.io/runestones/"
                                     allow="autoplay; encrypted-media"
                                     allowFullScreen
                                     title="unityGame"

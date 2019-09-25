@@ -7,7 +7,11 @@ using TMPro;
 public class StateManager : MonoBehaviour
 {
 
+<<<<<<< HEAD
   
+=======
+    // [SerializeField] Text textComponent;
+>>>>>>> 9e5d89f3c101bfe86f2513ca39f5d87ff7f97bb0
     [SerializeField] TextMeshProUGUI textComponent;
     [SerializeField] State startingState;
    

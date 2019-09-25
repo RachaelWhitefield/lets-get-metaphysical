@@ -8,7 +8,11 @@ public class Fade : MonoBehaviour
    public static Fade Instance{set;get;}
 
   [SerializeField] Image thisImg;
+<<<<<<< HEAD
 
+=======
+//   [SerializeField] Text thisText;
+>>>>>>> 9e5d89f3c101bfe86f2513ca39f5d87ff7f97bb0
   [SerializeField] TextMeshProUGUI thisText;
   
    private bool isInTransition;
@@ -32,7 +36,11 @@ public class Fade : MonoBehaviour
 
        transition += (isShowing) ? Time.deltaTime * (1/duration): -Time.deltaTime * (1/duration);
        thisImg.color = Color.Lerp(new Color(1,1,1,0),Color.white, transition);
+<<<<<<< HEAD
   
+=======
+    //    thisText.color = Color.Lerp(new Color(0,0,0,0),Color.black, transition);
+>>>>>>> 9e5d89f3c101bfe86f2513ca39f5d87ff7f97bb0
 
        if(transition > 1 || transition < 0) isInTransition = false;
    }

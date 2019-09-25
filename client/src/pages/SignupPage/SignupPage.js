@@ -35,11 +35,11 @@ class SignupPage extends Component {
             loggedIn: true,
             user: user.data.user
           });
-          console.log("log in successful");
+          // console.log("log in successful");
           window.location.href = "/profile";
         } else {
-          console.log("something went wrong :(");
-          console.log(user.data);
+          // console.log("something went wrong :(");
+          // console.log(user.data);
           this.setState({
             message: user.data
           });
@@ -51,7 +51,7 @@ class SignupPage extends Component {
   render() {
     return (
       <Container fluid id="signupBox">
-          <div class="signup-inner">
+          <div className="signup-inner">
             <Signup
                   username={this.state.username}
                   password={this.state.password}
