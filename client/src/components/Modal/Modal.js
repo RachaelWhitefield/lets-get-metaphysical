@@ -26,6 +26,7 @@ class StoneModal extends React.Component {
         favorite_chakra: this.props.stone.chakra,
         favorite_metaProps: this.props.stone.properties,
         favorite_image: this.props.stone.image,
+        favorite_imageText: this.props.stone.imageText
         }).then(res => console.log('success', res.data))
         .catch(err => console.log(err));
       

@@ -21,7 +21,7 @@ class Filter extends React.Component {
   }
 
   filterClick= (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     this.props.sortingFunction(event.target.dataset.section, event.target.value)
   }
 
