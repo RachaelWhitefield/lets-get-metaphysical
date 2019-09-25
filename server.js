@@ -42,7 +42,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/react-auth-simp
     
 });
 
-mongoose.connect(MONGODB_URI);
+// mongoose.connect(MONGODB_URI);
 
 
 
