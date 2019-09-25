@@ -1,12 +1,13 @@
 .form {
+    
     &-group {
-        margin: 1.2rem 0;
+        margin: 1.2rem 3rem;
     }
     &-text {
-        display: block;
         margin-top: 0.3rem;
         color: #888;
     }
+    
 
     input[type="text"],
     input[type="email"],
@@ -16,10 +17,9 @@
     textarea {
     display: block;
     width: 100%;
-    padding: 0.4rem;
+    // padding: 0.4rem;
     font-size: 1.2rem;
     border: 1px solid #ccc;
     opacity: 0.4;
     }
-
 }

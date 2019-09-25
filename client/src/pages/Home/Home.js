@@ -30,8 +30,7 @@ class Home extends Component {
   render() {
     return (
     <div>
-         <section class="landing">
-        <div class="dark-overlay">
+        <section class="landing">
             <div class="landing-inner">
                 <h1 class="x-large">STONED</h1>
                 <p class="lead">Space, the final frontier. These are the voyages of the Starship Enterprise. Its
@@ -40,11 +39,10 @@ class Home extends Component {
                     actually our duty to future generations and their quest to ensure the survival of the human species.
                 </p>
                 <div class="buttons">
-                    <a href="/signup" class="btn btn-primary">Sign Up</a>
-                    <a href="/login" class="btn btn">Login</a>
+                    <a href="/signup" class="btn">Sign Up</a>
+                    <a href="/login" class="btn">Login</a>
                 </div>
             </div>
-        </div>
     </section>
       </div>
 
