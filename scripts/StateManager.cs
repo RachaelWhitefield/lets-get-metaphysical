@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StateManager : MonoBehaviour
 {
 
-    [SerializeField] Text textComponent;
+  
+    [SerializeField] TextMeshProUGUI textComponent;
     [SerializeField] State startingState;
    
 
@@ -23,21 +25,6 @@ public class StateManager : MonoBehaviour
 
 
     public void ManageState() {
-    
-
-
-
-        // if(thisRune == "a") {
-        //     state = nextStates[0];
-        // } else if(thisRune == "b") {
-        //     state = nextStates[1];
-        // } else if(thisRune == "d") {
-        //     state = nextStates[2];
-        // } else if(thisRune == "f") {
-        //     state = nextStates[3];
-        // } else if(thisRune == "g") {
-        //     state = nextStates[4];
-        // }
         textComponent.text = state.GetStateInfo();
     }
 }
