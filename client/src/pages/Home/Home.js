@@ -30,22 +30,22 @@ class Home extends Component {
   render() {
     return (
       <>
-        <section class="landing">
-          <div class="landing-inner">
+        <section className="landing">
+          <div className="landing-inner">
             <Container>
-              <Row centered>
+              <Row>
                 <Col sm="12" md={{ size: 6, offset: 3 }}>
                   <h1 className="pageTitle">
                     <span className="header">GET STONED</span>
                   </h1>
-                  <p class="lead">Space, the final frontier. These are the voyages of the Starship Enterprise. Its
+                  <p className="lead">Space, the final frontier. These are the voyages of the Starship Enterprise. Its
                       five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
                       boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
                       actually our duty to future generations and their quest to ensure the survival of the human species.
                 </p>
-                  <div class="buttons">
-                    <a href="/signup" class="btn homebtn">Sign Up</a>
-                    <a href="/login" class="btn homebtn">Login</a>
+                  <div className="buttons">
+                    <a href="/signup" className="btn homebtn">Sign Up</a>
+                    <a href="/login" className="btn homebtn">Login</a>
                   </div>
                 </Col>
               </Row>
