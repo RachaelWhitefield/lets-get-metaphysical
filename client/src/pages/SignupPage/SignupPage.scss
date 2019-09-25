@@ -3,13 +3,14 @@
 @import "../../sass/_form.scss";
 @import "../../sass/_utilities.scss";
 
-.signup {
+#signupBox {
     position: relative;
-    background: url("/assets/images/purpleRock.jpeg") no-repeat center center/cover;
+    background: url("/assets/images/signupPage.jpeg") no-repeat center center/cover;
     height: 100vh;
+    width: 100vw;
+    margin: 0px;
 
     &-inner {
-        color: #fff;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -19,4 +20,26 @@
         justify-content: center;
         text-align: center;
     }
+}
+
+.loginLink {
+    margin-top: 20px;
+    text-align: center;
+}
+.text-primary {
+    color: black !important;
+}
+
+.loginLink {
+    a {
+        color: black;
+        font-family: $text-font;
+        font-size: 1rem;
+        
+    }
+}
+
+.lead {
+    text-align: center !important;
+    font-family: $text-font;
 }

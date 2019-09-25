@@ -1,12 +1,13 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input, Alert } from 'reactstrap';
 import { Link } from "react-router-dom";
+import "./Login.scss";
 
 function Login(props) {
     return (
-        <div className="loginBox">
-            <h2 className="loginTitle title-font">Login</h2>
-            <hr/>
+        <div className="innerLoginBox">
+
+            <h1 className="x-large" align="center">Log In</h1>
             {props.message ? (
                 <Alert className="animated fadeIn" color="danger">{props.message}</Alert>
             ) : (<></>)}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import StoneName from "../StoneName";
-import "./Modal.scss";
+import "./ModalStyle.scss";
 
 class StoneModal extends React.Component {
   constructor(props) {
