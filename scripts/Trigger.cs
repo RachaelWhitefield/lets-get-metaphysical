@@ -7,8 +7,6 @@ public class Trigger : MonoBehaviour
 {
 
     
-   
-    // public Rigidbody2D triggerBody; 
     public UnityEvent onTriggerEnter;
     public UnityEvent OnTriggerExit;
    
@@ -28,7 +26,6 @@ public class Trigger : MonoBehaviour
 
         if(other.tag == "trigger") {
             onTriggerEnter.Invoke();
-            mySprite.enabled = true;
             panel.ShowPanel();
         }
     }
@@ -36,7 +33,6 @@ public class Trigger : MonoBehaviour
     void OnTriggerExit2D(Collider2D other) {
         panel = FindObjectOfType<Panel>();
         if (other.CompareTag("trigger")) {
-            mySprite.enabled = false;
             panel.HidePanel();
         }
     }

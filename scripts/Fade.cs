@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 public class Fade : MonoBehaviour
 {
    public static Fade Instance{set;get;}
 
   [SerializeField] Image thisImg;
-  [SerializeField] Text thisText;
+//   [SerializeField] Text thisText;
+  [SerializeField] TextMeshProUGUI thisText;
   
    private bool isInTransition;
    private float transition;
@@ -32,7 +33,7 @@ public class Fade : MonoBehaviour
 
        transition += (isShowing) ? Time.deltaTime * (1/duration): -Time.deltaTime * (1/duration);
        thisImg.color = Color.Lerp(new Color(1,1,1,0),Color.white, transition);
-       thisText.color = Color.Lerp(new Color(0,0,0,0),Color.black, transition);
+    //    thisText.color = Color.Lerp(new Color(0,0,0,0),Color.black, transition);
 
        if(transition > 1 || transition < 0) isInTransition = false;
    }
