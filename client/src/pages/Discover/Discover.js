@@ -91,12 +91,12 @@ class Discover extends React.Component {
               <Row>
                                             
                 {this.state.stones.map(stone => (
-                  <StoneName key={stone._id}
+                  <StoneName key={stone.name}
                     name={stone.name}
-                    image={stone.imageText}
+                    image={stone.imageText}>
                     stoneModalOpen={event => this.stoneModalOpen(event, stone)}
                     toggle={this.toggle}
-                  />
+                    </StoneName>
                 ))}
                                             
                 <StoneModal
