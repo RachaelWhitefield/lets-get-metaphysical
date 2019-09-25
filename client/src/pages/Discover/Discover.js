@@ -44,9 +44,10 @@ class Discover extends React.Component {
 
   stoneFilter = (section, query) => {
     let stonesCopy = [...this.state.stones];
-    // console.log(stonesCopy)
-    // console.log(section, query);
-    let filterStones = stonesCopy.filter(stone => stone[section] === query);
+    console.log(stonesCopy)
+    
+    // console.log(section, String(query));
+    let filterStones = stonesCopy.filter(stone => stone[section].toLowerCase() === query);
     // console.log(filterStones);
 
     this.setState({ stones: filterStones });

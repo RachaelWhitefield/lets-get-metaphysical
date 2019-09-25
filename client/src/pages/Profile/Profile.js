@@ -29,7 +29,7 @@ class Profile extends Component {
             if (user.data.loggedIn) {
                 this.setState({
                     loggedIn: true,
-                    user: user.data.user,
+                    user: user.data.user
                 });
                 this.loadFavs();
             }
