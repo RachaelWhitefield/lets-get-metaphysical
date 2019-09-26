@@ -13,7 +13,8 @@ class Discover extends React.Component {
          modalOpen: false,
          currentStone: null,
          filteredStones: [],
-         availableColors: []
+         availableColors: [],
+         allStones: []
      }
 
      async componentDidMount() {
@@ -65,7 +66,6 @@ class Discover extends React.Component {
         this.setState(prevState => ({
             modalOpen: !prevState.modalOpen
         }));
-        // console.log("modal open is clicked")
     }
 
     stoneModalOpen = (event, stone) => {

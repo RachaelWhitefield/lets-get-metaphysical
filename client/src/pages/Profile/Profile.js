@@ -85,12 +85,16 @@ class Profile extends Component {
     stoneModalOpen = (event, stone) => {
         event.preventDefault();
         console.log(stone)
-        this.setState({ modalOpen: true, currentStone: {name: stone.favorite_name,
-            image: stone.favorite_image,
-            chakra: stone.favorite_chakra,
-            properties: stone.favorite_metaProps,
-            color: stone.favorite_color,
-            userId: stone.favorite_userId} });
+        this.setState({
+            modalOpen: true, currentStone: {
+                name: stone.favorite_name,
+                image: stone.favorite_image,
+                chakra: stone.favorite_chakra,
+                properties: stone.favorite_metaProps,
+                color: stone.favorite_color,
+                userId: stone.favorite_userId
+            }
+        });
 
     }
 
@@ -139,7 +143,11 @@ class Profile extends Component {
                                         </>
                                     )))
                                 ) : (
-                                        <h3>No Results to Display</h3>
+                                        <>
+                                            <Col sm={{ size: 3, offset: 3 }}>
+                                                <h3>No Results to Display</h3>
+                                            </Col>
+                                        </>
                                     )}
 
                                 <StoneModal
@@ -148,6 +156,7 @@ class Profile extends Component {
                                     isOpen={this.state.modalOpen}
                                     stone={this.state.currentStone}
                                     className="centered"
+
                                 />
 
 
