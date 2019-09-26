@@ -16,3 +16,12 @@ button.btn.filterButton {
     border-bottom-color: #1b2a49;
     border-bottom: solid 3px;
 }
+
+.disabled {
+ display: none !important;
+}
+
+.active {
+    background-color: white !important;
+    color: #1b2a49 !important;
+}

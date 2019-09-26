@@ -1,9 +1,11 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import "./Profile.scss";
 import { Button, Container, Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import DeleteBtn from "../../components/DeleteBtn/";
+import StoneName from "../../components/StoneName";
+import StoneModal from "../../components/Modal"
 
 
 
@@ -13,12 +15,16 @@ class Profile extends Component {
         loggedIn: false,
         user: null,
         loading: true,
-        name: "",
-        chakra: "",
-        color: "",
-        metaProps: [],
-        image: "",
-        favorites: []
+        favorites: [],
+        modalOpen: false,
+        currentStone: {
+            name: null,
+            image: null,
+            chakra: null,
+            properties: null,
+            color: null,
+            userId: null
+        }
     }
 
     componentDidMount() {
@@ -38,39 +44,135 @@ class Profile extends Component {
         });
 
 
-        
+
     }
 
     loading() {
-        setTimeout(()=> {
+        setTimeout(() => {
             this.setState({
                 loading: false
             })
-        }, 1000)  
+        }, 1000)
     }
 
-    loadFavs= () => {
+    loadFavs = () => {
         API.getFavs()
-        .then(res => 
-            this.setState({ favorites: res.data, name: "", chakra: "", color: "", metaProps: "", image: "", userId: ""})
+            .then(res => {
+                this.setState({ favorites: res.data })
+                console.log(res.data)
+                console.log(this.state.favorites)
+            }
             )
             .catch(err => console.log(err));
-           
-    };
+        // console.log(res)
 
+    };
 
 
     deleteFav = id => {
         API.deleteFav(id)
-        .then(res => this.loadFavs())
-        .catch(err => console.log(err));
+            .then(res => this.loadFavs())
+            .catch(err => console.log(err));
+    }
+
+    toggle = () => {
+        this.setState(prevState => ({
+            modalOpen: !prevState.modalOpen
+        }));
+        // console.log("modal open is clicked")
+    }
+
+    stoneModalOpen = (event, stone) => {
+        event.preventDefault();
+        console.log(stone)
+        this.setState({
+            modalOpen: true, currentStone: {
+                name: stone.favorite_name,
+                image: stone.favorite_image,
+                chakra: stone.favorite_chakra,
+                properties: stone.favorite_metaProps,
+                color: stone.favorite_color,
+                userId: stone.favorite_userId
+            }
+        });
+
     }
 
 
     render() {
         return (
             <Container fluid>
-            <div className="profilePage">
+                <Row>
+                    <Col sm={{ size: 3, offset: 1 }}>
+                        {this.state.loggedIn ? (
+                            <h1 className="pageTitle">
+                                <span className="header">WELCOME</span><br />
+                                {this.state.user.username}
+                            </h1>
+                        ) : (
+                                <div className="noUser">
+                                    {!this.state.loading ? (
+                                        <>
+                                            <h1>Please Log In</h1>
+                                            <Link className="loginLink" to="/login"><Button className="loginBtn">Login</Button></Link>
+                                        </>
+                                    ) : (
+                                            <img id="loadingIcon" src="./assets/images/loading-wheel.gif" alt="loading" />
+                                        )}
+                                </div>
+                            )}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col sm="8">
+                        <Container>
+                            <Row>
+                                {this.state.favorites.length ? (
+                                    (this.state.favorites.map(stone => (
+                                        <>
+                                            <StoneName
+                                                key={stone.favorite_name}
+                                                name={stone.favorite_name}
+                                                image={stone.favorite_image}
+                                                stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
+                                                toggle={this.toggle}
+                                            // key={fav._id}
+                                            />
+
+                                            <DeleteBtn onClick={() => this.deleteFav(stone._id)} />
+                                        </>
+                                    )))
+                                ) : (
+                                        <>
+                                            <Col sm={{ size: 3, offset: 3 }}>
+                                                <h3>No Results to Display</h3>
+                                            </Col>
+                                        </>
+                                    )}
+
+                                <StoneModal
+                                    modalOpen={this.state.modalOpen}
+                                    toggle={this.toggle}
+                                    isOpen={this.state.modalOpen}
+                                    stone={this.state.currentStone}
+                                    className="centered"
+
+                                />
+
+
+                            </Row>
+                        </Container>
+                    </Col>
+                </Row>
+            </Container>
+        )
+    }
+}
+
+
+export default Profile;
+
+{/* <div className="profilePage">
                 {this.state.loggedIn ? (
                     <div className="profileBox" align="center">
                         <h1 id="userTitle">Welcome {this.state.user.username}</h1> 
@@ -92,49 +194,4 @@ class Profile extends Component {
                         )}
                     </div> 
                 )}
-            </div>
-
-                <Row>
-                <Col sm="2">
-                    <h2>Favorite Stones</h2>
-           
-                        {this.state.favorites.length ? (
-                
-                            <ul>
-                                {this.state.favorites.map(fav => (
-                    
-                            <ul key={fav._id}>
-                            <strong>
-                                {fav.favorite_name}
-                            </strong>
-                            <li>
-                                {fav.favorite_chakra}
-                            </li>
-                            <li>
-                                {fav.favorite_color}
-                            </li>
-                            <li>
-                                {fav.favorite_metaProps}
-                            </li>
-                            <li>
-                                <img src={fav.favorite_image} alt={fav.favorite_name} />
-                            </li>
-
-                            <DeleteBtn onClick={() => this.deleteFav(fav._id)} />
-                    </ul>
-                    ))}
-                </ul>   
-                ) : (
-                    <h3>No Results to Display</h3>
-                )}                  
-                    
-                </Col>
-                </Row>
-            </Container>
-
-         )
-    }
-}
-
-
-export default Profile;
+            </div> */}
