@@ -2,7 +2,6 @@ import React from 'react';
 import Filter from "../../components/Filter";
 import { Container, Col, Row } from "reactstrap";
 import StoneName from "../../components/StoneName";
-// import stones from "../../stones.json";
 import StoneModal from "../../components/Modal";
 import { getGemstones } from "../../utils/GraphQLAPI";
 import "./Discover.scss"
@@ -12,7 +11,9 @@ class Discover extends React.Component {
  state = {
          stones: [],
          modalOpen: false,
-         currentStone: null
+         currentStone: null,
+         filteredStones: [],
+         availableColors: []
      }
 
      async componentDidMount() {
@@ -22,6 +23,7 @@ class Discover extends React.Component {
       async getApiGemstones() {
         const allStones = await getGemstones();
     
+        const availableColors = [];
         const stones = [];
         allStones.forEach(stone => {
           if (stone.gemstones.length > 0) {
@@ -35,19 +37,26 @@ class Discover extends React.Component {
                 image: gemstone.image,
                 imageText: gemstone.imageText
               });
+              if (availableColors.includes(gemstone.color)) {
+            } else {
+                availableColors.push(gemstone.color);
+              };
             });
           }
         });
-        this.setState({ stones });
+        this.setState({ stones, availableColors });
       }
 
-     stoneFilter = (section, query, allStones) => {
+     stoneFilter = (section, query) => {
          let stonesCopy = [...this.state.stones];
          if (query === "all") {
-            this.getApiGemstones()
+            // this.getApiGemstones()
+            console.log(this.state.stones)
          } else {
-             let filterStones = stonesCopy.filter(stone => stone[section].toLowerCase() === query);
-             this.setState({ stones: filterStones })
+             this.setState({ filteredStones: [] }, () => {
+                 let filterStones = stonesCopy.filter(stone => stone[section].toLowerCase() === query);
+                 this.setState({ filteredStones: filterStones })
+             })
          }
 
      }
@@ -77,19 +86,38 @@ class Discover extends React.Component {
                             </h1>
                             <Filter
                                 sortingFunction={this.stoneFilter}
+                                availableColors={this.state.availableColors}
                             />
                         </Col>
                         <Col sm="8">
                             <Container>
                             <Row>
-                            {this.state.stones.map(stone => (
+                            {this.state.filteredStones.length > 0
+                                ? (this.state.filteredStones.map(stone => (
+                                    <StoneName key={stone.name}
+                                        name={stone.name}
+                                        image={stone.imageText}
+                                        stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
+                                        toggle={this.toggle}
+                                    />
+                                ))
+                               ) : (this.state.stones.map(stone => (
+                                    <StoneName key={stone.name}
+                                        name={stone.name}
+                                        image={stone.imageText}
+                                        stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
+                                        toggle={this.toggle}
+                                    />
+                                ))
+                                ) }
+                            {/* {this.state.stones.map(stone => (
                                 <StoneName key={stone.name}
                                     name={stone.name}
                                     image={stone.imageText}
                                     stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
                                     toggle={this.toggle}
                                 />
-                            ))}
+                            ))} */}
                             <StoneModal
                                 modalOpen={this.state.modalOpen}
                                 toggle={this.toggle}
