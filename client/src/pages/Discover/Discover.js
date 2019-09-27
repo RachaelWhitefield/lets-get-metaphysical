@@ -51,7 +51,7 @@ class Discover extends React.Component {
      stoneFilter = (section, query) => {
          let stonesCopy = [...this.state.stones];
          if (query === "all") {
-            this.getApiGemstones()
+            this.setState({ filteredStones: this.state.stones })
          } else {
              this.setState({ filteredStones: [] }, () => {
                  let filterStones = stonesCopy.filter(stone => stone[section].toLowerCase() === query);
