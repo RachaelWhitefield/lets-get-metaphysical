@@ -51,8 +51,7 @@ class Discover extends React.Component {
      stoneFilter = (section, query) => {
          let stonesCopy = [...this.state.stones];
          if (query === "all") {
-            // this.getApiGemstones()
-            console.log(this.state.stones)
+            this.getApiGemstones()
          } else {
              this.setState({ filteredStones: [] }, () => {
                  let filterStones = stonesCopy.filter(stone => stone[section].toLowerCase() === query);
@@ -110,14 +109,7 @@ class Discover extends React.Component {
                                     />
                                 ))
                                 ) }
-                            {/* {this.state.stones.map(stone => (
-                                <StoneName key={stone.name}
-                                    name={stone.name}
-                                    image={stone.imageText}
-                                    stoneModalOpen={(event) => this.stoneModalOpen(event, stone)}
-                                    toggle={this.toggle}
-                                />
-                            ))} */}
+                            
                             <StoneModal
                                 modalOpen={this.state.modalOpen}
                                 toggle={this.toggle}

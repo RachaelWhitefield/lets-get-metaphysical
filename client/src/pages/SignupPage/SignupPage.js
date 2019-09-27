@@ -35,11 +35,9 @@ class SignupPage extends Component {
             loggedIn: true,
             user: user.data.user
           });
-          // console.log("log in successful");
           window.location.href = "/profile";
         } else {
-          // console.log("something went wrong :(");
-          // console.log(user.data);
+        
           this.setState({
             message: user.data
           });
