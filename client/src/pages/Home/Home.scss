@@ -43,6 +43,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: $title-weight;
 }
 
+h2 {
+    font-size: 48px !important;
+}
+
 ul {
     list-style: none;
 }
@@ -106,12 +110,13 @@ img {
 }
 
 .greyContainer {
-    background-color: #eee;
+    background: linear-gradient(0deg, #1b2a49, #016a88, #01b3bf);
     max-height: auto;
 }
 
 .section {
     padding: 100px 100px !important;
     margin: 0 auto;
+    color: white
 }
 
