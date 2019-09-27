@@ -54,11 +54,11 @@ class Home extends Component {
         <Row>
                 <Col sm="12" md="6" className="section runed">
                   <h2>GET RADICALLY RUNED</h2>
-                  <p>Rune casting is hella old and can give you all the answers you seek. It's a very intimate divination style and is ever changing as we are humans. We have developed a run casting game with three types or cast's to choose from. See where your stones lie.</p>
+                  <p>Rune casting is hella old and can give you all the answers you seek. It's a very intimate divination style and is ever changing as we are humans. We have developed a rune casting game with three types or casts to choose from. See where your stones lie.</p>
                 </Col>
                 <Col sm="12" md="6" className="section stoned">
                   <h2>GET TOTALLY STONED</h2>
-                  <p>Woahhh dude! Those stones be poppin'. They seem older than dirt. Gemstones have been around for millenia and have been used for healing, protection, and aligning chakras. We have created a custom API that holds these proporties to allow someone to learn which stones can help them in the ways needed. You can favorite the stones you want to use and get to them quicker through your profile. </p>
+                  <p>Woahhh dude! Those stones be poppin'. They seem older than dirt. Gemstones have been around for millenia and have been used for healing, protection, and aligning chakras. We have created a custom API that holds these properties to allow someone to learn which stones can help them in the ways needed. You can favorite the stones you want to use and get to them quicker through your profile. </p>
                 </Col>
               </Row>
               </div>
