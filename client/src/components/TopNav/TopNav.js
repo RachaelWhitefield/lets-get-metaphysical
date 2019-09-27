@@ -59,9 +59,9 @@ export default class Navigation extends Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
-                            <NavItem>
+                            {/* <NavItem>
                                 <NavLink href="/profile" className="pages">Profile</NavLink>
-                            </NavItem>
+                            </NavItem> */}
                         <NavItem>
                                 <NavLink href="/runes" className="pages">RUNES</NavLink>
                             </NavItem>

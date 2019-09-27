@@ -21,9 +21,11 @@ class Filter extends React.Component {
   }
 
   filterClick= (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     this.props.sortingFunction(event.target.dataset.section, event.target.value)
+    console.log(this.props.availableColors)
   }
+
 
   render() {
     return (
@@ -40,16 +42,16 @@ class Filter extends React.Component {
           <DropdownItem onClick={this.filterClick} value="crown" data-section="chakra">Crown</DropdownItem>
           <DropdownItem divider />
           <DropdownItem header>COLOR</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="gray" data-section="color">Gray</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="black" data-section="color">Black</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="red" data-section="color">Red</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="orange" data-section="color">Orange</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="yellow" data-section="color">Yellow</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="green" data-section="color">Green</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="pink" data-section="color">Pink</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="blue" data-section="color">Blue</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="purple" data-section="color">Purple</DropdownItem>
-          <DropdownItem onClick={this.filterClick} value="white" data-section="color">White</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="gray" data-section="color" className={this.props.availableColors.includes("Gray") ? "active" : "disabled"}>Gray</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="black" data-section="color" className={this.props.availableColors.includes("Black") ? "active" : "disabled"}>Black</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="red" data-section="color" className={this.props.availableColors.includes("Red") ? "active" : "disabled"}>Red</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="orange" data-section="color" className={this.props.availableColors.includes("Orange") ? "active" : "disabled"}>Orange</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="yellow" data-section="color" className={this.props.availableColors.includes("Yellow") ? "active" : "disabled"}>Yellow</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="green" data-section="color" className={this.props.availableColors.includes("Green") ? "active" : "disabled"}>Green</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="pink" data-section="color" className={this.props.availableColors.includes("Pink") ? "active" : "disabled"}>Pink</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="blue" data-section="color" className={this.props.availableColors.includes("Blue") ? "active" : "disabled"}>Blue</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="purple" data-section="color" className={this.props.availableColors.includes("Purple") ? "active" : "disabled"}>Purple</DropdownItem>
+          <DropdownItem onClick={this.filterClick} value="white" data-section="color" className={this.props.availableColors.includes("White") ? "active" : "disabled"}>White</DropdownItem>
           <DropdownItem divider />
           <DropdownItem onClick={this.filterClick} value="all">See All</DropdownItem>
         </DropdownMenu>
