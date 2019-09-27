@@ -46,6 +46,14 @@ h1 {
     }
 }
 
+.runes {
+    font-size: 20px;
+}
+
+.single {
+    margin-top: 50px;
+}
+
 .cast {
     padding-bottom: 50px;
     width: 100%;
@@ -66,9 +74,10 @@ h1 {
 }
 
 .iframe-container {
-    overflow: hidden;
+    overflow: visible;
     padding-top: 56.25%;
     position: relative;
+    height: 100%;
   }
    
   .iframe-container iframe {
