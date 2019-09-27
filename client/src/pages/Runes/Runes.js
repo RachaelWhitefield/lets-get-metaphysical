@@ -16,12 +16,17 @@ function Runes() {
                 <Col sm="6">
                     <Container>
                         <Row>
+                            <Col sm="8" className="runeInfo">
+                                <h2 className="runes">Of the various forms of divination, reading rune stones is perhaps the most intimate and unique to the individual performing the cast. The runes themselves are in constant movement, changing with us as we grow. When casting the stones, think of a question or aspect of your life you would like guidance with. There is no single interpretation.</h2>
+                            </Col>
+                        </Row>
+                        <Row>
                             <Col sm="3" className="cast">
                                 <img src="../../../assets/images/cross.png" />
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">RUNIC CROSS CAST</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
+                                <p>The Runic cross shows an interpretation of the matter at hand. The top most stone is the most likely outcome or resolution. The middle most stone represents potential obstacles. The stone directly below signifies the present while the bottom most stone gives context to the situation at large. On the far left we can see the past, and on the far right the future that we foresee occurring if we stay on this path.</p>
                             </Col>
                         </Row>
                         <Row>
@@ -30,7 +35,7 @@ function Runes() {
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">NORN CAST</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
+                                <p>The three stone norn cast give a more general outline of events. The left most stone represents the past, the middle represents the future, and the left is a possible future.</p>
                             </Col>
                         </Row>
                         <Row>
@@ -39,7 +44,12 @@ function Runes() {
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">SINGLE CAST</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec congue dolor. Sed varius augue vel massa aliquam scelerisque.</p>
+                                <p>A single stone cast works best with a specific question in mind. Think carefully about what you would like guidance with before choosing a stone.</p>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="3" className="specialthanks">
+                                <h4> Special thanks to Diane Kielty for the rune stone interpretations.</h4>
                             </Col>
                         </Row>
                     </Container>
