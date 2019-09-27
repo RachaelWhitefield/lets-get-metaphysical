@@ -35,7 +35,7 @@ function Runes() {
                             </Col>
                             <Col sm="8">
                                 <h3 className="castTitle">NORN CAST</h3>
-                                <p>The three stone norn cast give a more general outline of events. The left most stone represents the past, the middle represents the future, and the left is a possible future.</p>
+                                <p>The three stone norn cast give a more general outline of events. The left most stone represents the past, the middle represents the present, and the left is a possible future.</p>
                             </Col>
                         </Row>
                         <Row>

@@ -29,13 +29,11 @@ class LoginPage extends Component {
           username: this.state.username,
           password: this.state.password
         }).then(user => {
-          console.log(user);
           if (user.data.loggedIn) {
             this.setState({
               loggedIn: true,
               user: user.data.user
             });
-            console.log("log in successful");
             window.location.href = "/profile";
           } else if (user.data.message) {
             this.setState({

@@ -59,12 +59,10 @@ class Profile extends Component {
         API.getFavs()
             .then(res => {
                 this.setState({ favorites: res.data })
-                console.log(res.data)
-                console.log(this.state.favorites)
+                
             }
             )
             .catch(err => console.log(err));
-        // console.log(res)
 
     };
 
@@ -79,12 +77,10 @@ class Profile extends Component {
         this.setState(prevState => ({
             modalOpen: !prevState.modalOpen
         }));
-        // console.log("modal open is clicked")
     }
 
     stoneModalOpen = (event, stone) => {
         event.preventDefault();
-        console.log(stone)
         this.setState({
             modalOpen: true, currentStone: {
                 name: stone.favorite_name,
