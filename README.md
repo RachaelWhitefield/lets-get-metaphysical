@@ -24,12 +24,10 @@ Check out the app [here](https://glacial-journey-69057.herokuapp.com)
 * Unity - click here to learn more about our [Unity game](https://github.com/TheGuardingDark/runestones)
 
 
-
-
 ##### "GET STONED" PROUDLY BUILT BY:
-[Rachael Whitefield](https://github.com/RachaelWhitefield)
-[Liv Heller](https://github.com/TheGuardingDark)
-[Wynn Chaney](https://github.com/wynnc)
-[Casey Eickhoff](https://github.com/caseyisonit)
+* [Rachael Whitefield](https://github.com/RachaelWhitefield) - Front End
+* [Liv Heller](https://github.com/TheGuardingDark) - Unity/C# Game
+* [Wynn Chaney](https://github.com/wynnc) - Custom API/Back End
+* [Casey Eickhoff](https://github.com/caseyisonit) - Front End
 
 

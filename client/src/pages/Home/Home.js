@@ -34,14 +34,11 @@ class Home extends Component {
           <div className="landing-inner">
             <Container>
               <Row>
-                <Col sm="12" md={{ size: 6, offset: 3 }}>
+                <Col sm="12" md={{ size: 8, offset: 2 }}>
                   <h1 className="pageTitle">
                     <span className="header">GET STONED</span>
                   </h1>
-                  <p className="lead">Space, the final frontier. These are the voyages of the Starship Enterprise. Its
-                      five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
-                      boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
-                      actually our duty to future generations and their quest to ensure the survival of the human species.
+                  <p className="lead">Four score and millions of millenia ago, there was a big BOOM and stones were formed. Through the ages we have used these mystical marvels to heal, protect, and predict the future. 
                 </p>
                   <div className="buttons">
                     <a href="/signup" className="btn homebtn">Sign Up</a>
@@ -56,18 +53,12 @@ class Home extends Component {
         <div className="greyContainer">
         <Row>
                 <Col sm="12" md="6" className="section runed">
-                  <h2>GET RUNED</h2>
-                  <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its
-                      five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
-                      boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
-                      actually our duty to future generations and their quest to ensure the survival of the human species.</p>
+                  <h2>GET RADICALLY RUNED</h2>
+                  <p>Rune casting is hella old and can give you all the answers you seek. It's a very intimate divination style and is ever changing as we are humans. We have developed a run casting game with three types or cast's to choose from. See where your stones lie.</p>
                 </Col>
                 <Col sm="12" md="6" className="section stoned">
-                  <h2>GET RUNED</h2>
-                  <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its
-                      five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to
-                      boldly go where no man has gone before. Many say exploration is part of our destiny, but it’s
-                      actually our duty to future generations and their quest to ensure the survival of the human species.</p>
+                  <h2>GET TOTALLY STONED</h2>
+                  <p>Woahhh dude! Those stones be poppin'. They seem older than dirt. Gemstones have been around for millenia and have been used for healing, protection, and aligning chakras. We have created a custom API that holds these proporties to allow someone to learn which stones can help them in the ways needed. You can favorite the stones you want to use and get to them quicker through your profile. </p>
                 </Col>
               </Row>
               </div>
