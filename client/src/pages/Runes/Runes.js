@@ -51,7 +51,7 @@ function Runes() {
                     </Container>
                 </Col>
                 <Container className="gameContainer">
-                    <Row>
+                    <Row className="justify-content-center">
                         <Col sm="12" className="game">
                             <div className="iframe-container">
                                 <iframe src="https://theguardingdark.github.io/runestones/"
