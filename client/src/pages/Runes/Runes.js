@@ -50,11 +50,13 @@ function Runes() {
 
                     </Container>
                 </Col>
-                <Container className="gameContainer">
-                    <Row>
+                </Row>
+    
+                    <Row className="gameContainer">
                         <Col sm="12" className="game">
                             <div className="iframe-container">
                                 <iframe src="https://theguardingdark.github.io/runestones/"
+                                frameborder="0"
                                     allow="autoplay; encrypted-media"
                                     allowFullScreen
                                     title="unityGame"
@@ -63,8 +65,6 @@ function Runes() {
                         </Col>
                     </Row>
                 </Container>
-            </Row>
-        </Container>
     )
 }
 

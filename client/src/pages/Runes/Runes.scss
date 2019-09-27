@@ -67,6 +67,8 @@ h1 {
 .gameContainer {
 
     margin-top: 0 !important;
+    padding-top: 70px;
+    
 
     .game {
         padding: 0 0 50px 0;
@@ -74,10 +76,11 @@ h1 {
 }
 
 .iframe-container {
-    overflow: visible;
+    // overflow: visible;
+    overflow: hidden;
     padding-top: 56.25%;
     position: relative;
-    height: 100%;
+    // height: 100%;
   }
    
   .iframe-container iframe {
@@ -89,4 +92,3 @@ h1 {
      width: 100%;
   }
 
-  
