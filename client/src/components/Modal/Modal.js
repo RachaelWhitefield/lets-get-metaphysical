@@ -17,9 +17,10 @@ class StoneModal extends React.Component {
 
   handleClick = () => {
 
-    let newText = this.state.favText === "Add to Favorites" ? "Saved to Favorites" : "Add to Favorites"
-    this.setState({favText: newText})
-   
+
+      let newText = this.state.favText === "Add to Favorites" ? "Saved to Favorites" : "Add to Favorites"
+      this.setState({favText: newText})
+      
       API.saveFav({
         favorite_name: this.props.stone.name,
         favorite_color: this.props.stone.color,
@@ -27,8 +28,8 @@ class StoneModal extends React.Component {
         favorite_metaProps: this.props.stone.properties,
         favorite_image: this.props.stone.image,
         favorite_imageText: this.props.stone.imageText
-        }).then(res => console.log('success', res.data))
-        .catch(err => console.log(err));
+      }).then(res => console.log('success', res.data))
+      .catch(err => console.log(err));
       
     
 };  
