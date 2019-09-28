@@ -151,7 +151,7 @@ class Profile extends Component {
                                     isOpen={this.state.modalOpen}
                                     stone={this.state.currentStone}
                                     className="centered"
-
+                                
                                 />
 
 

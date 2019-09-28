@@ -70,7 +70,7 @@ class Discover extends React.Component {
     stoneModalOpen = (event, stone) => {
         event.preventDefault();
         this.setState({ modalOpen: true, currentStone: stone });
-
+        console.log(stone)
     }
 
     render() {

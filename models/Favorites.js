@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 let Favorites = new Schema({
     favorite_name: {
-        type: String
+        type: String,
+        unique: true
     },
     favorite_color: {
         type: String
